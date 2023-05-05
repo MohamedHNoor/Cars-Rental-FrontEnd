@@ -1,6 +1,6 @@
 <a name="readme-top"></a>
 <div align="center">
-  <h3><b>Hello rails react</b></h3>
+  <h3><b>Cars Rental FrontEnd</b></h3>
 </div>
 <a name="readme-top"></a>
 

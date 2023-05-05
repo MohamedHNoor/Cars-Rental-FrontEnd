@@ -1,39 +1,167 @@
-# Getting Started with Create React App
+<a name="readme-top"></a>
+<div align="center">
+  <h3><b>Hello rails react</b></h3>
+</div>
+<a name="readme-top"></a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- TABLE OF CONTENTS -->
 
-## Available Scripts
+# 📗 Table of Contents
 
-In the project directory, you can run:
+- [📗 Table of Contents](#-table-of-contents)
+- [📖 Car Rental Frontend ](#-car-rental-frontend-)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+    - [Key Features ](#key-features-)
+  - [💻 Getting Started ](#-getting-started-)
+  - [To get a local copy up and running, follow these steps.](#to-get-a-local-copy-up-and-running-follow-these-steps)
+    - [Prerequisites](#prerequisites)
+    - [Setup](#setup)
+    - [Install](#install)
+  - [👥 Authors ](#-authors-)
+  - [🔭 Future Features ](#-future-features-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🙏 Acknowledgments ](#-acknowledgments-)
+  - [📝 License ](#-license-)
 
-### `npm start`
+<!-- PROJECT DESCRIPTION -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# 📖 Cars Rental Frontend <a name="about-project"></a>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Car Rentals Frontend is a React app that serves as a front end to the Car Rentals project.
 
-### `npm test`
+## 🛠 Built With <a name="built-with"></a>
+This app is build with React and Redux.
+### Tech Stack <a name="tech-stack"></a>
+> <li><a href="https://reactjs.org/">React</a></li>
+> <li><a href="https://redux.js.org/">Redux</a></li>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Key Features <a name="key-features"></a>
 
-### `npm run build`
+> - The login page where the user logs in to the website.
+> - The home page where the user can see a list of cars and click on any car to display the details of that car. 
+> - The details page is where the user can click on the "Reserve" button to reserve the car.
+> - The user can see a list of their reservations.
+> - The user can add a new car.
+> - The user can click on the delete button from the naviagtion panel and see a list of all cars with the car name and a "delete" button and then delete a particular car.
+> - The deleted cars are removed from the home page.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<!-- GETTING STARTED -->
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 💻 Getting Started <a name="getting-started"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## To get a local copy up and running, follow these steps.
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+In order to run this project you need:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Mac or PC
+- Install node.js
+- Use npm as package manager.
+- Understanding of React and Redux
 
+### Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Clone this repository to your desired folder:
+
+```sh
+ git clone https://github.com/houdamzari/Cars-Rental-FrontEnd.git
+```
+
+- Navigate into the cloned folder
+
+```sh
+ cd Cars-Rental-FrontEnd
+
+```
+### Install
+
+- Install this project with:
+
+```sh
+ npm install
+```
+
+- Start the server
+
+```sh
+ npm start
+```
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- AUTHORS -->
+
+## 👥 Authors <a name="authors"></a>
+
+👤 **Ayodeji Abidemi**
+
+- GitHub: [![demix007](https://img.shields.io/badge/-demix007-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/demix007)
+- Twitter: [![dat_dope_demix](https://img.shields.io/badge/-dat_dope_demix-blue?logo=Twitter&logoColor=skyBlue&style=plastic)](https://twitter.com/dat_dope_demix)
+- LinkedIn: [![ayodeji-abidemi](https://img.shields.io/badge/-AyodejiAbidemi-white?logo=LinkedIn&logoColor=181717&style=plastic)](https://linkedin.com/in/ayodeji-abidemi)
+
+👤 **Mohamed Hassan Noor**
+
+- GitHub: [![MohamedHNoor](https://img.shields.io/badge/-MohamedHNoor-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/MohamedHNoor)
+- Twitter: [![MohamedHNoor](https://img.shields.io/badge/-MohamedHNoor-blue?logo=Twitter&logoColor=skyBlue&style=plastic)](https://twitter.com/MohamedHNoor)
+- LinkedIn: [![MohamedHNoor](https://img.shields.io/badge/-MohamedHNoor-white?logo=LinkedIn&logoColor=181717&style=plastic)](https://www.linkedin.com/in/mohamedhnoor/)
+
+👤 **Houda Mzari**
+
+- GitHub: [![houdamzari](https://img.shields.io/badge/-houdamzari-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/houdamzari/)
+- LinkedIn: [![houdamzari](https://img.shields.io/badge/-houdamzari-white?logo=LinkedIn&logoColor=181717&style=plastic)](https://www.linkedin.com/in/houda-mzari/)
+
+👤 **Kashif Saleem**
+
+- GitHub:[![Kashif](https://img.shields.io/badge/-Kashif-white?logo=GitHub&logoColor=181717&style=plastic)](https://github.com/Kashif-Saleem-Ghuman)
+- Twitter:[![Kashif](https://img.shields.io/badge/-Kashif-blue?logo=Twitter&logoColor=skyBlue&style=plastic)](https://twitter.com/Kashif14Saleem)
+- LinkedIn:[![Kashif](https://img.shields.io/badge/-Kashif-white?logo=LinkedIn&logoColor=181717&style=plastic)](https://www.linkedin.com/in/kashifsaleemghuman/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- FUTURE FEATURES -->
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ] **Allow users to choose a language for the application**
+- [ ] **Add payment option**
+- [ ] **Some UX improvements: include transitions and/or animations, etc.**
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- CONTRIBUTING -->
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/houdamzari/Cars-Rental-FrontEnd/issues).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- SUPPORT -->
+
+## ⭐️ Show your support <a name="support"></a>
+
+If you like this project, please leave a ⭐️
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## 🙏 Acknowledgments <a name="acknowledgements"></a>
+- We would like to thank Microverse for providing the reading materials that aided us to during the project development.
+- We would like to give Credit to 🙏 Murat Korkmaz the author of the original Vespa- Responsive Redesign, as required by the Creative Commons License.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## 📝 License <a name="license"></a>
+
+This project is [MIT](./License) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

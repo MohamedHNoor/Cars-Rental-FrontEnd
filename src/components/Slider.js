@@ -11,7 +11,7 @@ function Slider(props) {
     <div>
       <Swiper
       spaceBetween={50}
-      slidesPerView={3}
+      slidesPerView={1}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
@@ -23,7 +23,6 @@ function Slider(props) {
       <SwiperSlide>  <img src={carFive} alt="" /> </SwiperSlide>
       <SwiperSlide>  <img src={carOne} alt="" /> </SwiperSlide>
 
-      ...
     </Swiper></div>
   );
 }

@@ -8,6 +8,7 @@ import carFour from '../../assets/car4.png'
 import carFive from '../../assets/car5.png'
 function Slider(props) {
   return (
+    <div style={{width: '30rem',display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
       <Swiper
       spaceBetween={50}
       slidesPerView={1}
@@ -22,7 +23,7 @@ function Slider(props) {
       <SwiperSlide>  <img src={carFive} alt="" /> </SwiperSlide>
       <SwiperSlide>  <img src={carOne} alt="" /> </SwiperSlide>
 
-    </Swiper>
+    </Swiper></div>
   );
 }
 

@@ -3,14 +3,14 @@ import Slider from "../components/Slider/Slider";
 import Swiper from "swiper";
 import SideBar from "../components/SideBar/SideBar";
 
-function Homepage(props) {
+function LifeStyle(props) {
   return (
-    <div style={{display: 'flex'}}>
+    <div style={{display: 'flex', justifyContent:'center'}}>
       <SideBar />
-      <Slider />
+      {/* <Slider /> */}
       
     </div>
   );
 }
 
-export default Homepage;
+export default LifeStyle;

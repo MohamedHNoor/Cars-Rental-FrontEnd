@@ -3,6 +3,7 @@
   font-size: 1.2rem;
   font-weight: bolder;
   padding: 1.5rem 0;
+  text-decoration: none;
 }
 
 .nav-item-active {
@@ -11,4 +12,12 @@
 
 .logo {
   margin-bottom: 2rem;
+}
+
+.socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
 }

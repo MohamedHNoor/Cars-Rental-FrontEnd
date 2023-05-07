@@ -6,12 +6,32 @@ import carTwo from '../../assets/car2.png'
 import carThree from '../../assets/car3.png'
 import carFour from '../../assets/car4.png'
 import carFive from '../../assets/car5.png'
+import './Slider.css'
+import "swiper/css";
+import "swiper/css/navigation";
+import { Navigation } from "swiper";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
+
+
 function Slider(props) {
   return (
-    <div style={{width: '30rem',display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+    <div style={{width: '100%',position: 'relative'}}>
+      <div className="slider-btns">
+      <div className="swiper-prev">
+          <IoIosArrowBack />
+        </div>
+    <div className="swiper-next">
+          <IoIosArrowForward />
+        </div>
+        </div>
       <Swiper
       spaceBetween={50}
-      slidesPerView={1}
+      slidesPerView={2}
+      modules={[Navigation]}
+      navigation={{
+        nextEl: '.swiper-next',
+        prevEl: '.swiper-prev',
+      }}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
     >
@@ -23,7 +43,8 @@ function Slider(props) {
       <SwiperSlide>  <img src={carFive} alt="" /> </SwiperSlide>
       <SwiperSlide>  <img src={carOne} alt="" /> </SwiperSlide>
 
-    </Swiper></div>
+    </Swiper> 
+    </div>
   );
 }
 

@@ -22,7 +22,7 @@ function SideBar(props) {
   }]
 
   return (
-    <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-white " style={{height : '100vh', padding: 10}}>
+    <div className="d-flex flex-column flex-shrink-0 p-3 text-white bg-white sidebarWrapper" style={{height : '100vh', padding: 10, justifySelf: 'flex-start'}}>
       <img src={logo} className="logo" alt="logo" />
       <ul className="nav nav-pills flex-column mb-auto">
         { nav.map(item => ( <li className="nav-item" key={item.text}><Link to={item.path} className="nav-item">{item.text}</Link></li>))}

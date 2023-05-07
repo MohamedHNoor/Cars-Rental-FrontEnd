@@ -1,0 +1,14 @@
+.nav-item {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bolder;
+  padding: 1.5rem 0;
+}
+
+.nav-item-active {
+  background-color: #96bf01;
+}
+
+.logo {
+  margin-bottom: 2rem;
+}

@@ -44,9 +44,11 @@ function Slider(props) {
     },
   ]
   return (
-    <div style={{width: '90%',position: 'relative'}}>
-      <h2>Latest Models</h2>
-      <span>Please select a model</span>
+    <div style={{width: '100%',position: 'relative'}}>
+      <div className="slider-title"> 
+        <h2 >Latest Models</h2>
+      <span >Please select a model</span></div>
+   
     <div style={{width: '90%',position: 'relative'}}>
       <div className="slider-btns">
       <div className="swiper-prev">
@@ -67,29 +69,19 @@ function Slider(props) {
       // onSlideChange={() => console.log('slide change')}
       // onSwiper={(swiper) => console.log(swiper)}
     >
-      {carOptions.map(car => ( <SwiperSlide key={car.image}><div className="wrapper"><div className="slide-container"><img src={car.image} alt="car" />
-      
-      </div> 
-      <h3>{car.text}</h3>
+      {carOptions.map(car => ( <SwiperSlide key={car.image}><div className="wrapper">
+        <div className="slide-container">
+        <img className="car" src={car.image} alt="car" />
+        </div> 
+      <div className="car-info">
+      <h3 className="car-title"  >{car.title}</h3>
       <p className="car-description">{car.description}</p>
-      <div className="slide-socials">
-        <TiSocialFacebookCircular fill='thistle' />
-        <TiSocialTwitterCircular fill='thistle' />
-        <TiSocialPinterestCircular fill='thistle' />
-      </div>
-
+ <div className="slide-socials">
+        <TiSocialFacebookCircular fill='thistle' className="icon" />
+        <TiSocialTwitterCircular fill='thistle' className="icon"  />
+        <TiSocialPinterestCircular fill='thistle' className="icon" />
+      </div></div>
       </div>  </SwiperSlide>))}
-     
-
-
-
-{/* 
-      <SwiperSlide>  <img src={carThree} alt="car" /> </SwiperSlide>
-      <SwiperSlide>  <img src={carFour} alt="car" /> </SwiperSlide>
-      <SwiperSlide>  <img src={carTwo} alt="car" /> </SwiperSlide>
-      <SwiperSlide>  <img src={carFive} alt="car" /> </SwiperSlide>
-      <SwiperSlide>  <img src={carOne} alt="car" /> </SwiperSlide> */}
-
     </Swiper> 
     </div></div>
   );

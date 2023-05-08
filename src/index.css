@@ -1,4 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap.css';
+
 body {
   margin: 0;
   font-family:
@@ -28,7 +29,9 @@ code {
     monospace;
 }
 
-body , html , #root {
+body,
+html,
+#root {
   margin: 0;
   padding: 0;
 }

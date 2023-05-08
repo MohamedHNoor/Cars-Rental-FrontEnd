@@ -9,8 +9,23 @@
   background-blend-mode: multiply;
 }
 
-.white-text {
+.description {
   color: #fff !important;
+  font-size: 1vw;
+  text-align: center;
+}
+
+.header-book {
+  font-size: 2vw;
+  color: #fff;
+  letter-spacing: 0.25em;
+  word-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.horizontal-line {
+  border: 1px solid #fff;
+  width: 80%;
 }
 
 .container {
@@ -22,6 +37,7 @@
 }
 
 .button {
+  font-size: 1vw;
   width: 10vw;
   border-radius: 50px;
   background-color: white;

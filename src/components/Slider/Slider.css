@@ -70,3 +70,42 @@
   justify-content: center;
   align-items: center;
 }
+
+.car-description {
+  color: thistle;
+  width: 25rem;
+  font-size: smaller;
+}
+
+span {
+  color: thistle;
+
+}
+
+
+.slide-container {
+  background-color: #ededed;
+  border-radius: 50%;
+  width: fit-content;
+  height: 23rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  gap: 1rem;
+}
+
+.slide-socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  
+}

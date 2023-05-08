@@ -25,40 +25,48 @@
 .swiper-wrapper , .swiper{
   width: 100% !important;
 }
-
-.swiper-slide {
-  width: fit-content!important;
-  margin-left: 4rem;
+.swiper {
+  position: relative;
 }
 
-.swiper-prev  {
-  background-color: #97bf0f ;
-  color: #97bf0f ;
-  width: 5rem!important;
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
-  position: relative;
-z-index: 999;
-cursor: pointer;
+.swiper-prev,
+.swiper-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: #97bf0f;
+}
+
+.swiper-prev {
+  left: calc(-30px - 1.5em);
+  border-top-right-radius: 1.5rem ;
+  border-bottom-right-radius: 1.5rem ;
+  width: 3rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .swiper-next {
-  background-color: #97bf0f ;
-  color: #97bf0f ;
-  width: 5rem!important;
-  border-top-left-radius: 2rem;
-  border-bottom-left-radius: 2rem;
-  position: relative;
-z-index: 999;
-cursor: pointer;
-
+  right: calc(-30px - 1.5em);
+  border-top-left-radius: 1rem ;
+  border-bottom-left-radius: 1rem ;
+  width: 3rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-.slider-btns {
-  position: absolute;
+.swiper-slide {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 100%;
 }

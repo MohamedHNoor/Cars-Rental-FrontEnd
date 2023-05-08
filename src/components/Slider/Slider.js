@@ -15,7 +15,8 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 function Slider(props) {
   return (
-    <div style={{width: '100%',position: 'relative'}}>
+    
+    <div style={{width: '90%',position: 'relative'}}>
       <div className="slider-btns">
       <div className="swiper-prev">
           <IoIosArrowBack />

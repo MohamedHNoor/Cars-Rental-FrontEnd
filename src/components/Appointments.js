@@ -9,7 +9,6 @@ export default function Appointments() {
   const navigate = useNavigate();
   const Home = () => {
     navigate("/");
-    console.log("working")
   }
 
   const [value, setValue] = useState('')

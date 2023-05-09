@@ -13,36 +13,10 @@ import { Navigation } from "swiper";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { TiSocialTwitterCircular , TiSocialPinterestCircular ,TiSocialFacebookCircular} from "react-icons/ti";
 import { BsCardChecklist } from "react-icons/bs";
-
-
+import { Link } from "react-router-dom";
+import { carOptions } from "../../data";
 function Slider(props) {
- let carOptions = [
-    {
-      image: carOne,
-      title : 'test',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptate cum minima modi beatae cumque ex.'
-    },
-    {
-      image: carTwo,
-      title : 'test',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptate cum minima modi beatae cumque ex.'
-    },
-    {
-      image: carThree,
-      title : 'test',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptate cum minima modi beatae cumque ex.'
-    },
-    {
-      image: carFour,
-      title : 'test',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptate cum minima modi beatae cumque ex.'
-    },
-    {
-      image: carFive,
-      title : 'test',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis voluptate cum minima modi beatae cumque ex.'
-    },
-  ]
+ 
   return (
     <div style={{width: '100%',position: 'relative'}}>
       <div className="slider-title"> 
@@ -66,10 +40,9 @@ function Slider(props) {
         nextEl: '.swiper-next',
         prevEl: '.swiper-prev',
       }}
-      // onSlideChange={() => console.log('slide change')}
-      // onSwiper={(swiper) => console.log(swiper)}
+     
     >
-      {carOptions.map(car => ( <SwiperSlide key={car.image}><div className="wrapper">
+      {carOptions.map(car => ( <SwiperSlide key={car.id}><Link to={`/detailsPage/${car.id}`} className="wrapper">
         <div className="slide-container">
         <img className="car" src={car.image} alt="car" />
         </div> 
@@ -81,7 +54,7 @@ function Slider(props) {
         <TiSocialTwitterCircular fill='thistle' className="icon"  />
         <TiSocialPinterestCircular fill='thistle' className="icon" />
       </div></div>
-      </div>  </SwiperSlide>))}
+      </Link>  </SwiperSlide>))}
     </Swiper> 
     </div></div>
   );

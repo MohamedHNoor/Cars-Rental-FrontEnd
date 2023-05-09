@@ -10,7 +10,6 @@ import { useLocation } from 'react-router-dom';
 
 function SideBar(props) {
   const location = useLocation();
-  console.log(location.pathname);
   const nav = [
     {
       text: 'MODELS',

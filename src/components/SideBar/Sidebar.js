@@ -1,6 +1,6 @@
 import React from 'react';
 import logo from '../../assets/logo.png';
-import './SideBar.css';
+import './Sidebar.css';
 import { BsTwitter } from 'react-icons/bs';
 import { ImFacebook } from 'react-icons/im';
 import { TfiGoogle } from 'react-icons/tfi';

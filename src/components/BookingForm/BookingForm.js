@@ -1,10 +1,14 @@
 import React from 'react';
+import SideBar from "../SideBar/Sidebar";
 
 function BookingForm(props) {
   return (
-    <div>
-      Booking form
-    </div>
+<form>
+      <input type="text" />
+      <input type="text" />
+      <input type="text" />
+    </form>
+    
   );
 }
 

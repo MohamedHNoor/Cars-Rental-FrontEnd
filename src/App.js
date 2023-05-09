@@ -4,7 +4,8 @@ import LifeStyle from "./pages/lifestyle";
 import CarHistory from "./components/CarHistory/CarHistory";
 import Reservationpage from "./pages/reservationpage";
 import Detailspage from "./pages/detailspage";
-import Appointments from "./components/Appointments";
+import Appointments from "./components/Reservations/Reservations";
+import AddReservations from "./components/Reservations/AddReservations";
 import "./App.css";
 
 function App() {
@@ -17,7 +18,8 @@ function App() {
         <Route path="/addItem" element={<Reservationpage />} />
         <Route path="/deleteItem" element={<CarHistory />} />
         <Route path="/detailsPage/:id" element={<Detailspage />} />
-        <Route path="/appointments" element={<Appointments />} />
+        <Route path="/reservations/add" element={<AddReservations />} />
+
       </Routes>
     </div>
   );

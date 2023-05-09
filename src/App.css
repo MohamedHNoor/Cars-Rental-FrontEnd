@@ -45,3 +45,57 @@
   padding: 0.5vw;
   border: none;
 }
+
+.add-input {
+  font-size: 1.5vw;
+  width: 30vw;
+  border-radius: 50px;
+  text-align: center;
+  border: 1px outset #fff;
+  outline-offset: 0.25rem;
+  outline: 0.15rem solid rgb(73, 87, 23);
+  font-weight: 400 !important;
+  background: top;
+  color: #fff !important;
+  padding: 0.5vw;
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-text-fill-color: #fff !important; /* For older versions of Firefox */
+  -moz-appearance: none;
+}
+
+.header-reservation {
+  font-size: 4vw;
+  color: #fff;
+  letter-spacing: 0.25em;
+  word-spacing: 0.1em;
+  font-weight: 400;
+}
+
+.button-reserve {
+  font-size: 1.5vw;
+  width: 15vw;
+  border-radius: 50px;
+  background-color: white;
+  color: green;
+  padding: 0.5vw;
+  border: 1px outset #fff;
+  outline-offset: 0.25rem;
+  outline: 0.15rem solid white;
+  margin-top: 5vw;
+}
+
+.select-car {
+  font-size: 1vw;
+  width: 10vw;
+  border-radius: 50px;
+  background-color: white;
+  color: green;
+  padding: 0.6vw;
+  border: none;
+  text-align: center;
+}
+
+input.add-input::placeholder {
+  color: #fff;
+}

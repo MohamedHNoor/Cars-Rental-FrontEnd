@@ -14,6 +14,15 @@ export const fetchCars = createAsyncThunk(
     }
   }
 );
+// Action Types
+const ADD_CAR = 'ADD_CAR';
+const REMOVE_CAR = 'REMOVE_CAR';
+
+// Action Creators
+export const addCar = (task) => ({
+  type: ADD_CAR,
+  payload: task,
+});
 
 const initialState = {
   cars: [],
@@ -22,8 +31,15 @@ const initialState = {
 export const carSlice = createSlice({
   name: "cars",
   initialState,
-  reducers: {},
-  extraReducers: {
+  reducers: {
+    addCar: (state, action) => {
+      state.cars.push(action.payload);
+    },
+    removeCar: (state, action) => {
+      state.cars = state.cars.filter((car) => car.id !== action.payload);
+    },
+  },
+      extraReducers: {
     [fetchCars.fulfilled]: (state, action) => {
       state.cars = action.payload;
     },

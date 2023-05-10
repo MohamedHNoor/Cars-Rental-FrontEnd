@@ -3,14 +3,12 @@ import axios from "axios";
 export const fetchCars = createAsyncThunk(
   "cars/fetchData",
   async (location, { rejectWithValue }) => {
-    const API_KEY = "c0f8476fee975d5faaf52fdebb33284c";
-    const { lat, lon } = location;
     try {
       const response = await axios.get(
-        `https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=${API_KEY}`
+        `${BASE_URL}/endpoint`
       );
 
-      return response.data.list[0].components;
+      return response.data;
     } catch (err) {
       return rejectWithValue(await err.response.data);
     }
@@ -18,18 +16,18 @@ export const fetchCars = createAsyncThunk(
 );
 
 const initialState = {
-  polutionData: [],
+  cars: [],
 };
 
-export const airpolutionSlice = createSlice({
-  name: "polution",
+export const carSlice = createSlice({
+  name: "cars",
   initialState,
   reducers: {},
   extraReducers: {
-    [fetchAirPollution.fulfilled]: (state, action) => {
-      state.polutionData = action.payload;
+    [fetchCars.fulfilled]: (state, action) => {
+      state.cars = action.payload;
     },
   },
 });
 
-export default airpolutionSlice.reducer;
+export default carSlice.reducer;

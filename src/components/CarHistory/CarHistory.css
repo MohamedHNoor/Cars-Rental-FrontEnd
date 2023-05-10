@@ -3,24 +3,22 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  gap: 2rem;  
+  gap: 2rem;
   flex-wrap: wrap;
 }
 
 .history-card {
   width: fit-content;
-  height: fit-content;
+  height: 20%;
 }
 
-.history-card > img{
+.history-card > img {
   width: 15rem;
   height: 6rem;
-  background-color: black;
 }
 
-.history-card > div{
+.history-card > div {
   width: 10rem;
-  height: fit-content;
+  height: 100%;
   font-size: 1rem;
 }
-

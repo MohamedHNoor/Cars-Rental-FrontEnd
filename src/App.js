@@ -8,6 +8,7 @@ import Appointments from "./components/Reservations/Reservations";
 import AddReservations from "./components/Reservations/AddReservations";
 import MyReservations from "./components/Reservations/MyReservations";
 import "./App.css";
+import Reservationshistory from "./pages/reservationshistory";
 
 function App() {
   return (
@@ -17,7 +18,7 @@ function App() {
         {/* <Route path="/lifestyle" element={<LifeStyle />} /> */}
         <Route path="/bookride" element={<Appointments />} />
         <Route path="/addItem" element={<Reservationpage />} />
-        <Route path="/deleteItem" element={<CarHistory />} />
+        <Route path="/deleteItem" element={<Reservationshistory />} />
         <Route path="/detailsPage/:id" element={<Detailspage />} />
         <Route path="/reservations/add" element={<AddReservations />} />
         <Route path="/myreservations" element={<MyReservations />} />

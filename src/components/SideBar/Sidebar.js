@@ -15,16 +15,20 @@ function SideBar(props) {
       text: 'MODELS',
       path: '/',
     },
-    { text: 'LIFESTYLE', path: '/lifestyle' },
-    { text: 'SHOP', path: '/shop' },
-    { text: 'Book RIDE', path: '/bookride' },
+    // { text: 'LIFESTYLE', path: '/lifestyle' },
+    // { text: 'SHOP', path: '/shop' },
+    { text: 'BOOK YOUR RIDE', path: '/bookride' },
     {
-      text: 'ADD ITEM',
+      text: 'ADD CAR',
       path: '/addItem', // redirects to form
     },
     {
-      text: 'DELETE ITEM', // redirects to user cars history
+      text: 'DELETE CAR', // redirects to user cars history
       path: '/deleteItem',
+    },
+    {
+      text: 'MY RESERVATIONS', // redirects to user cars history
+      path: '/myreservations',
     },
   ];
 

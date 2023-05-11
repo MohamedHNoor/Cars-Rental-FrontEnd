@@ -55,13 +55,14 @@
   outline-offset: 0.25rem;
   outline: 0.15rem solid rgb(73, 87, 23);
   font-weight: 400 !important;
-  background: top;
+  background-color: #96cf2c;
   color: #fff !important;
   padding: 0.5vw;
   appearance: none;
   -webkit-appearance: none;
   -webkit-text-fill-color: #fff !important; /* For older versions of Firefox */
   -moz-appearance: none;
+  cursor: pointer;
 }
 
 .header-reservation {
@@ -98,4 +99,8 @@
 
 input.add-input::placeholder {
   color: #fff;
+}
+
+.react-datepicker-wrapper {
+  width: inherit;
 }

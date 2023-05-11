@@ -1,18 +1,17 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
+import {Card , Button} from 'react-bootstrap';
 import './CarHistory.css';
 import { reservations } from "../../data";
-// import { useDispatch } from "react-redux";
-// import { removeCar } from "../../redux/slices/carSlice"; 
+import { useDispatch } from "react-redux";
+import { removeCar } from "../../redux/slices/carSlice"; 
 
 function CarHistory(props) {
 
-  // const dispatch = useDispatch();
+  const dispatch = useDispatch();
 
-  // const handleRemoveCar = (carId) => {
-  //   dispatch(removeCar(carId));
-  // };
+  const handleRemoveCar = (carId) => {
+    dispatch(removeCar(carId));
+  };
 
   return (
     <div className="cards-grid">

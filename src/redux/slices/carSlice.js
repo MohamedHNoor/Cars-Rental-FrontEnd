@@ -5,8 +5,8 @@ export const fetchCars = createAsyncThunk(
   "cars/fetchData",
   async (location, { rejectWithValue }) => {
     try {
-      const response = await axios.get(`${BASE_URL}/endpoint`);
-      return response.data;
+      const response = await axios.get(`https://car-rental-api.fly.dev/api/v1/cars`);
+      console.log(response.data);
     } catch (err) {
       return rejectWithValue(await err.response.data);
     }

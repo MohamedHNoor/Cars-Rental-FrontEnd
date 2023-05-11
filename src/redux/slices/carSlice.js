@@ -8,7 +8,7 @@ export const fetchCars = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const response = await axios.get(`${BASE_URL}/cars`);
-      return response.data
+      return response.data;
     } catch (err) {
       return rejectWithValue(await err.response.data);
     }
@@ -20,7 +20,7 @@ export const fetchCar = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const response = await axios.get(`${BASE_URL}/cars/${id}`);
-      return response.data
+      return response.data;
     } catch (err) {
       return rejectWithValue(await err.response.data);
     }
@@ -33,9 +33,24 @@ export const deleteCar = createAsyncThunk(
     try {
       const response = await axios.delete(`${BASE_URL}/cars/${id}`, {
         headers: {
-          'Authorization': `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.tXaBpE7HY3pk3A_WuB0eXoVmOononF5Y70p9v5JD8U0
-          `
-        }
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.i9Nwr63d6lUGxx_ORpgOyQ1Qo-u_VbguRzHj8SHOGYQ`,
+        },
+      });
+      return response.data;
+    } catch (err) {
+      return rejectWithValue(await err.response.data);
+    }
+  }
+);
+
+export const createNewCar = createAsyncThunk(
+  "cars/createNewCar",
+  async (carData, { rejectWithValue }) => {
+    try {
+      const response = await axios.post(`${BASE_URL}/cars`, carData, {
+        headers: {
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.i9Nwr63d6lUGxx_ORpgOyQ1Qo-u_VbguRzHj8SHOGYQ`,
+        },
       });
       return response.data;
     } catch (err) {
@@ -46,7 +61,7 @@ export const deleteCar = createAsyncThunk(
 
 const initialState = {
   cars: [],
-  singleCar: {}
+  singleCar: {},
 };
 
 export const carSlice = createSlice({
@@ -58,8 +73,8 @@ export const carSlice = createSlice({
     },
     removeCar: (state, action) => {
       const filteredCars = state.cars.filter((car) => car.id != action.payload);
-      state.cars = filteredCars
-    }
+      state.cars = filteredCars;
+    },
   },
   extraReducers: {
     [fetchCars.fulfilled]: (state, action) => {
@@ -68,9 +83,13 @@ export const carSlice = createSlice({
     [fetchCar.fulfilled]: (state, action) => {
       state.singleCar = action.payload;
     },
+    [deleteCar.fulfilled]: (state, action) => {
+      const deletedCarId = action.payload;
+      state.cars = state.cars.filter((car) => car.id !== deletedCarId);
+    },
   },
 });
 
-export const { removeCar } = carSlice.actions;
+export const { removeCar, addCar } = carSlice.actions;
 
 export default carSlice.reducer;

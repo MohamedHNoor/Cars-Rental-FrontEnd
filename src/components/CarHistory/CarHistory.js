@@ -1,30 +1,27 @@
 import React from 'react';
 import {Card , Button} from 'react-bootstrap';
 import './CarHistory.css';
-import { reservations } from "../../data";
-import { useDispatch } from "react-redux";
-import { removeCar } from "../../redux/slices/carSlice"; 
-
+import { useDispatch, useSelector } from "react-redux";
+import { deleteCar } from "../../redux/slices/carSlice";
+import { removeCar } from "../../redux/slices/carSlice";
 function CarHistory(props) {
-
+  const {cars} = useSelector(state => state.cars)
+  console.log(cars)
   const dispatch = useDispatch();
 
   const handleRemoveCar = (carId) => {
     dispatch(removeCar(carId));
+    dispatch(deleteCar(carId));
   };
 
   return (
     <div className="cards-grid">
-      {reservations.map(reservation => (
-        <Card key={reservation.id} className="history-card">
-          <Card.Img variant="top" src={reservation.image} />
+      {cars && cars?.map(car => (
+        <Card key={car.id} className="history-card">
+          <Card.Img variant="top" src={car.photo} />
           <Card.Body>
-            <Card.Title>{reservation.title}</Card.Title>
-            <Card.Text>
-              <div>20/02/2022</div>
-              <div>city</div>
-            </Card.Text>
-            <Button variant="primary" onClick={() => handleRemoveCar(reservation.id)}>Delete</Button>
+            <Card.Title>{car.name}</Card.Title>
+            <Button variant="primary" onClick={() => handleRemoveCar(car.id)}>Delete</Button>
           </Card.Body>
         </Card>
       ))}

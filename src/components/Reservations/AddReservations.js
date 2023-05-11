@@ -15,7 +15,7 @@ const AddReservations = () => {
 
   return (
     <>
-      <div className='wrapper background-tint'>
+      <div className='wrapper-add-reservation background-tint'>
         <div className="w-50 container">
 
           <form>

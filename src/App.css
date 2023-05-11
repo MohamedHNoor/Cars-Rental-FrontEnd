@@ -4,6 +4,12 @@
   background-position: center;
 }
 
+.wrapper-add-reservation {
+  background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/Luxury-Car-PNG-Image-HD.png");
+  background-size: cover;
+  background-position: center;
+}
+
 .background-tint {
   background-color: #96cf2c; /* Green tint */
   background-blend-mode: multiply;

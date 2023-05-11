@@ -1,5 +1,5 @@
 import React from 'react'
-import DatePicker from '../Date Picker/DatePicker'
+import DateRange from '../Date Picker/DatePicker'
 import { useNavigate } from "react-router-dom";
 
 
@@ -21,10 +21,8 @@ const AddReservations = () => {
           <form>
             <h1 className='header-reservation my-5'>Reservation</h1>
             <div className='d-flex flex-column justify-content-center align-items-center'>
-              <input className='mb-4 add-input ' required type="text" placeholder='Name autofill' />
-              <input className='mb-4 add-input' required type="text" placeholder='Car autofill' />
+              <DateRange />
 
-              <DatePicker />
               <select className='mb-4 add-input'>
                 <option disabled selected value="">Select City</option>
                 <option value="London">London</option>
@@ -39,6 +37,8 @@ const AddReservations = () => {
           </form>
         </div>
       </div>
+
+
     </>
   )
 }

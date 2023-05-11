@@ -10,7 +10,7 @@ const AddReservations = () => {
 
   const navigate = useNavigate();
   const Home = () => {
-    navigate("/");
+    navigate("/myreservations");
   }
 
   return (

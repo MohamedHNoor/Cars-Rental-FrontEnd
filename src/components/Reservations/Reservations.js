@@ -17,7 +17,7 @@ export default function Reservations() {
 
   return (
     <>
-      <div className='wrapper background-tint'>
+      <div className='wrapper-reservation background-tint'>
         <div className="container w-50">
           <h1 className='header-book'>BOOK A CAR RIDE</h1>
           <hr className="horizontal-line" />

@@ -1,23 +1,43 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
 
-const DatePicker = () => {
-  const [date, setDate] = useState('');
-  const dateInputRef = useRef(null);
-
-  const handleChange = (e) => {
-    setDate(e.target.value);
+const DateRange = () => {
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(null);
+  const onChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
   };
-
   return (
-    <div>
-      <input className='mb-4 add-input'
-        type="date"
-        onChange={handleChange}
-        ref={dateInputRef}
+    <>
+      <label className="mb-2 text-white h5" htmlFor="start-date">
+        Start Date:
+      </label>
+      <DatePicker
+        className="mb-4 add-input"
+        selected={startDate}
+        onChange={(date) => setStartDate(date)}
+        selectsStart
+        startDate={startDate}
+        endDate={endDate}
+        placeholderText="Select start date"
       />
-
-    </div>
+      <label className="mb-2 text-white h5" htmlFor="start-date">
+        End Date:
+      </label>
+      <DatePicker
+        className="mb-4 add-input"
+        selected={startDate}
+        onChange={(date) => setEndDate(date)}
+        selectsEnd
+        startDate={startDate}
+        endDate={endDate}
+        minDate={startDate}
+      />
+    </>
   );
 };
 
-export default DatePicker;
+export default DateRange;

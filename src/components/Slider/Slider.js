@@ -14,9 +14,9 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { TiSocialTwitterCircular , TiSocialPinterestCircular ,TiSocialFacebookCircular} from "react-icons/ti";
 import { BsCardChecklist } from "react-icons/bs";
 import { Link } from "react-router-dom";
-import { carOptions } from "../../data";
+import { useSelector } from "react-redux";
 function Slider(props) {
- 
+ const {cars} = useSelector(state => state.cars)
   return (
     <div style={{width: '100%',position: 'relative'}}>
       <div className="slider-title"> 
@@ -42,12 +42,12 @@ function Slider(props) {
       }}
      
     >
-      {carOptions.map(car => ( <SwiperSlide key={car.id}><Link to={`/detailsPage/${car.id}`} className="wrapper">
+      {cars.map(car => ( <SwiperSlide key={car.id}><Link to={`/detailsPage/${car.id}`} className="wrapper">
         <div className="slide-container">
-        <img className="car" src={car.image} alt="car" />
+        <img className="car" src={car.photo} alt="car" />
         </div> 
       <div className="car-info">
-      <h3 className="car-title"  >{car.title}</h3>
+      <h3 className="car-title"  >{car.name}</h3>
       <p className="car-description">{car.description}</p>
  <div className="slide-socials">
         <TiSocialFacebookCircular fill='thistle' className="icon" />

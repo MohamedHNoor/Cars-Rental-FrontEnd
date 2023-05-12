@@ -1,6 +1,12 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom";
 
 function Reservations(props) {
+
+  const navigate = useNavigate();
+  const Home = () => {
+    navigate("/reservations/add");
+  };
   return (
     <>
       <div className='wrapper-reservation background-tint'>

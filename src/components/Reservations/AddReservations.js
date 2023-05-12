@@ -1,6 +1,7 @@
 import React from 'react'
 import DateRange from '../Date Picker/DatePicker'
 import { useNavigate } from "react-router-dom";
+import SideBar from "../SideBar/Sidebar";
 
 
 
@@ -15,6 +16,8 @@ const AddReservations = () => {
 
   return (
     <>
+     <div className="sliderwrapper">
+        <SideBar />
       <div className='wrapper-add-reservation background-tint'>
         <div className="w-50 container">
 
@@ -37,7 +40,7 @@ const AddReservations = () => {
           </form>
         </div>
       </div>
-
+    </div>
 
     </>
   )

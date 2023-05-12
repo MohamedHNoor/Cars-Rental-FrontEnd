@@ -59,9 +59,29 @@ export const createNewCar = createAsyncThunk(
   }
 );
 
+
+export const createReservation = createAsyncThunk(
+  "cars/createReservation",
+  async (reservationData, { rejectWithValue }) => {
+    try {
+      const response = await axios.post(`${BASE_URL}/reservations`, reservationData, {
+        headers: {
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.i9Nwr63d6lUGxx_ORpgOyQ1Qo-u_VbguRzHj8SHOGYQ`,
+        },
+      });
+      console.log(response.data)
+      return response.data;
+    } catch (err) {
+      return rejectWithValue(await err.response.data);
+    }
+  }
+);
+
+
 const initialState = {
   cars: [],
   singleCar: {},
+  reservations: [],
 };
 
 export const carSlice = createSlice({
@@ -75,6 +95,9 @@ export const carSlice = createSlice({
       const filteredCars = state.cars.filter((car) => car.id != action.payload);
       state.cars = filteredCars;
     },
+    addReservation: (state, action) => {
+      state.reservations.push(action.payload);
+    }
   },
   extraReducers: {
     [fetchCars.fulfilled]: (state, action) => {
@@ -90,6 +113,6 @@ export const carSlice = createSlice({
   },
 });
 
-export const { removeCar, addCar } = carSlice.actions;
+export const { removeCar, addCar, addReservation } = carSlice.actions;
 
 export default carSlice.reducer;

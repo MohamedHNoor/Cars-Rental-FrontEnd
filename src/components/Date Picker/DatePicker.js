@@ -2,9 +2,10 @@ import React, { useRef, useState } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
+
 const DateRange = () => {
   const [startDate, setStartDate] = useState(new Date());
-  const [endDate, setEndDate] = useState(null);
+  const [endDate, setEndDate] = useState(new Date());
   const onChange = (dates) => {
     const [start, end] = dates;
     setStartDate(start);
@@ -29,7 +30,7 @@ const DateRange = () => {
       </label>
       <DatePicker
         className="mb-4 add-input"
-        selected={startDate}
+        selected={endDate}
         onChange={(date) => setEndDate(date)}
         selectsEnd
         startDate={startDate}

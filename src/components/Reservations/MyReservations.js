@@ -6,7 +6,7 @@ const MyReservations = () => {
     <>
       <div className="sliderwrapper">
         <SideBar />
-        <div className="wrapper-reservation background-tint">
+        <div className="wrapper-my-reservation background-tint">
           MyReservations
         </div>
       </div>

@@ -12,6 +12,13 @@
   width: 100%;
 }
 
+.wrapper-my-reservation {
+  background-image: url("https://image.cnbcfm.com/api/v1/image/102979390-P90196605-highRes.jpg?v=1441738507&w=1600&h=900");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
 .background-tint {
   background-color: #96cf2c; /* Green tint */
   background-blend-mode: multiply;

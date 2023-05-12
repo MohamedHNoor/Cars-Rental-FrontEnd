@@ -2,12 +2,14 @@
   background-image: url("https://www.pngmart.com/files/4/Corvette-Car-Transparent-Background.png");
   background-size: cover;
   background-position: center;
+  width: 100%;
 }
 
 .wrapper-add-reservation {
   background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/Luxury-Car-PNG-Image-HD.png");
   background-size: cover;
   background-position: center;
+  width: 100%;
 }
 
 .background-tint {

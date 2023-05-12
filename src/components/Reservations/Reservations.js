@@ -1,11 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import SideBar from "../SideBar/Sidebar";
+import { createReservation } from "../../redux/slices/carSlice";
 
 function Reservations(props) {
   const navigate = useNavigate();
-  const Home = () => {
-    navigate("/reservations/add");
+  const dispatch = useDispatch();
+  const { cars } = useSelector((state) => state.cars);
+  console.log(cars);
+  const [reservationData, setReservationData] = useState({
+    city: "london",
+    pick_up: new Date().toISOString().split("T")[0], // Set to current date
+    return_date: new Date().toISOString().split("T")[0], // Set to current date
+    car_id: 0, // Initialize with a default value
+  });
+  // const [reservationData, setReservationData] = useState({
+  // });
+  // const handleBookNow = () => {
+  //   dispatch(addReservation(reservationData));
+  //   navigate("/reservations/add");
+  // };
+  // const handleBookNow = () => {
+  //   if (selectedCar) {
+  //     const reservationData = {
+  //       car_id: selectedCar,
+
+  //     };
+  //     dispatch(createReservation(reservationData));
+  //     navigate("/reservations/add");
+  //   }
+  // };
+  const handleBookNow = () => {
+    // Find the selected car based on its name
+    const selectedCar = cars.find((car) => car.name === reservationData.car_id);
+    if (selectedCar) {
+      // Update the car_id with the actual car_id value
+      setReservationData({ ...reservationData, car_id: selectedCar.id });
+      dispatch(createReservation(reservationData));
+      navigate("/reservations/add");
+    }
   };
   return (
     <>
@@ -26,17 +60,27 @@ function Reservations(props) {
               sequi odio?
             </p>
             <div className="d-flex gap-2 justify-content-center align-items-baseline ">
-              <select className="select-car">
+              <select
+                className="select-car"
+                value={reservationData.car_id}
+                onChange={(e) =>
+                  setReservationData({
+                    ...reservationData,
+                    car_id: e.target.value,
+                  })
+                }
+              >
                 <option disabled selected value="">
                   Select car
                 </option>
-                <option value="volvo">Volvo</option>
-                <option value="saab">Saab</option>
-                <option value="opel">Opel</option>
-                <option value="audi">Audi</option>
+                {cars.map((car) => (
+                  <option key={car.id} value={car.name}>
+                    {car.name}
+                  </option>
+                ))}
               </select>
 
-              <button type="button" onClick={Home} className="button">
+              <button type="button" onClick={handleBookNow} className="button">
                 Book Now
               </button>
             </div>

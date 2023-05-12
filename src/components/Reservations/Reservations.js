@@ -8,12 +8,13 @@ function Reservations(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { cars } = useSelector((state) => state.cars);
-  console.log(cars);
+  console.log("Cars fetched: ", cars);
   const [reservationData, setReservationData] = useState({
     city: "london",
-    pick_up: new Date().toISOString().split("T")[0], // Set to current date
-    return_date: new Date().toISOString().split("T")[0], // Set to current date
-    car_id: 0, // Initialize with a default value
+    pick_up: "05/13/2023", // Set to current date
+    return_date: "05/14/2023", // Set to current date
+    car_id: 0, // initially set to 0
+    user_id:1 // Set to current user
   });
   // const [reservationData, setReservationData] = useState({
   // });
@@ -31,13 +32,36 @@ function Reservations(props) {
   //     navigate("/reservations/add");
   //   }
   // };
+  // const handleBookNow = () => {
+  //   // Find the selected car based on its name
+  //   const selectedCar = cars.find((car) => car.name === reservationData.car_id);
+  //   if (selectedCar) {
+  //     // Update the car_id with the actual car_id value
+  //     setReservationData({ ...reservationData, car_id: selectedCar.id });
+  //     dispatch(createReservation(reservationData));
+  //     navigate("/reservations/add");
+  //   }
+  // };
+
+  // const handleBookNow = () => {
+  //   // Find the selected car based on its name
+  //   const selectedCar = cars.find((car) => car.name === reservationData.car_id);
+  //   if (selectedCar) {
+  //     // Update the car_id with the actual car_id value
+  //     const carId = selectedCar.id.toString(); // Ensure the car_id is a string
+  //     setReservationData({ ...reservationData, car_id: carId });
+  //     dispatch(createReservation(reservationData));
+  //     navigate("/reservations/add");
+  //   }
+  // };
   const handleBookNow = () => {
     // Find the selected car based on its name
     const selectedCar = cars.find((car) => car.name === reservationData.car_id);
     if (selectedCar) {
       // Update the car_id with the actual car_id value
-      setReservationData({ ...reservationData, car_id: selectedCar.id });
-      dispatch(createReservation(reservationData));
+      const carId = selectedCar.id.toString(); // Ensure the car_id is a string
+      const updatedReservationData = { ...reservationData, car_id: carId };
+      dispatch(createReservation(updatedReservationData));
       navigate("/reservations/add");
     }
   };

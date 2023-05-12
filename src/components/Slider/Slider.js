@@ -48,7 +48,9 @@ function Slider(props) {
         </div> 
       <div className="car-info">
       <h3 className="car-title"  >{car.name}</h3>
-      <p className="car-description">{car.description}</p>
+      <p className="car-description">{car.description} <span className="car-description">{car.model}</span></p>
+     
+
  <div className="slide-socials">
         <TiSocialFacebookCircular fill='thistle' className="icon" />
         <TiSocialTwitterCircular fill='thistle' className="icon"  />

@@ -9,8 +9,8 @@ function Reservations(props) {
   const dispatch = useDispatch();
   const { cars } = useSelector((state) => state.cars);
   console.log("Cars fetched: ", cars);
-  const pickUpDate = new Date(2023, 4, 13); // Month is 0-based (0: January, 1: February, etc.)
-  const returnDate = new Date(2023, 4, 14); // Month is 0-based (0: January, 1: February, etc.)
+  const pickUpDate = new Date(2023, 5, 13); // Month is 0-based (0: January, 1: February, etc.)
+  const returnDate = new Date(2023, 5, 29); // Month is 0-based (0: January, 1: February, etc.)
   const [reservationData, setReservationData] = useState({
     city: "london",
     pick_up: pickUpDate.toISOString(), // Convert date to string format accepted by the API

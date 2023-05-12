@@ -1,9 +1,17 @@
-import React from 'react'
+import React from "react";
+import SideBar from "../SideBar/Sidebar";
 
 const MyReservations = () => {
   return (
-    <div>MyReservations</div>
-  )
-}
+    <>
+      <div className="sliderwrapper">
+        <SideBar />
+        <div className="wrapper-reservation background-tint">
+          MyReservations
+        </div>
+      </div>
+    </>
+  );
+};
 
-export default MyReservations
+export default MyReservations;

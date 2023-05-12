@@ -72,6 +72,7 @@ export const createReservation = createAsyncThunk(
       console.log(response.data)
       return response.data;
     } catch (err) {
+      console.error(err);
       return rejectWithValue(await err.response.data);
     }
   }
@@ -110,6 +111,9 @@ export const carSlice = createSlice({
       const deletedCarId = action.payload;
       state.cars = state.cars.filter((car) => car.id !== deletedCarId);
     },
+    [createReservation.fulfilled]: (state, action) => {
+      state.reservations.push(action.payload);
+    }
   },
 });
 

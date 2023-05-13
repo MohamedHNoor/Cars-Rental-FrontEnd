@@ -1,7 +1,8 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
+import { getUserFromLocalStorage } from "../../utils/LocalStorage";
 
-export const BASE_URL = "http://localhost:3000/api/v1";
+export const BASE_URL = "https://cars-api.up.railway.app/api/v1";
 
 export const fetchCars = createAsyncThunk(
   "cars/fetchData",
@@ -31,9 +32,11 @@ export const deleteCar = createAsyncThunk(
   "cars/deleteCar",
   async (id, { rejectWithValue }) => {
     try {
+      const token = getUserFromLocalStorage();
+      console.log("token: ", token);
       const response = await axios.delete(`${BASE_URL}/cars/${id}`, {
         headers: {
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.mEV1tGfbNab0HJZatFjrXdDNgolA6mf4oUgC_im6TA8`,
+          Authorization: `Bearer ${token.token}`,
         },
       });
       return response.data;
@@ -47,9 +50,11 @@ export const createNewCar = createAsyncThunk(
   "cars/createNewCar",
   async (carData, { rejectWithValue }) => {
     try {
+      const token = getUserFromLocalStorage();
+      console.log("token: ", token);
       const response = await axios.post(`${BASE_URL}/cars`, carData, {
         headers: {
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.mEV1tGfbNab0HJZatFjrXdDNgolA6mf4oUgC_im6TA8`,
+          Authorization: `Bearer ${token.token}`,
         },
       });
       return response.data;
@@ -64,9 +69,11 @@ export const createReservation = createAsyncThunk(
   "cars/createReservation",
   async (reservationData, { rejectWithValue }) => {
     try {
+      const token = getUserFromLocalStorage();
+      console.log("token: ", token);
       const response = await axios.post(`${BASE_URL}/reservations`, reservationData, {
         headers: {
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.mEV1tGfbNab0HJZatFjrXdDNgolA6mf4oUgC_im6TA8`,
+          Authorization: `Bearer ${token.token}`,
         },
       });
       console.log(response.data)

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const customFetch = axios.create({
-  baseURL: 'http://localhost:3000',
+  baseURL: 'https://cars-api.up.railway.app',
 });
 
 export default customFetch;

@@ -9,7 +9,7 @@ import AddReservations from "./components/Reservations/AddReservations";
 import MyReservations from "./components/Reservations/MyReservations";
 import "./App.css";
 import Reservationshistory from "./pages/reservationshistory";
-import LoginPage from "./pages/loginpage";
+import LoginPage from "./pages/LoginPage";
 import SignupPage from "./pages/signuppage";
 import LoginForm from "./components/LoginForm/LoginForm";
 import SignupForm from "./components/SignupForm/SignupForm";
@@ -26,10 +26,7 @@ function App() {
         <Route path="/detailsPage/:id" element={<Detailspage />} />
         <Route path="/reservations/add" element={<AddReservations />} />
         <Route path="/myreservations" element={<MyReservations />} />
-        <Route path="/login" element={<LoginForm />} />
-        <Route path="/signup" element={<SignupForm />} />
-
-
+        <Route path="/register" element={<LoginForm />} />
       </Routes>
     </div>
   );

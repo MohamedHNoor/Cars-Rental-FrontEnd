@@ -14,6 +14,12 @@ import Error from './pages/Error';
 import ProtectedRoute from './pages/ProtectedRoute';
 
 function App() {
+
+  const dispatch = useDispatch();
+  useEffect(()=> {
+    dispatch(fetchCars())
+  },[])
+
   return (
     <div className="App">
       <BrowserRouter>

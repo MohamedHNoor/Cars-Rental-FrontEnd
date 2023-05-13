@@ -1,23 +1,9 @@
-import React, { useState, useMemo } from 'react'
-import Select from 'react-select'
-import countryList from 'react-select-country-list'
-import { useNavigate } from "react-router-dom";
+import React from 'react';
 
-export default function Reservations() {
-
-
-  const navigate = useNavigate();
-  const Home = () => {
-    navigate("/reservations/add");
-  }
-
-
-
-
-
+function Reservations(props) {
   return (
     <>
-      <div className='wrapper background-tint'>
+      <div className='wrapper-reservation background-tint'>
         <div className="container w-50">
           <h1 className='header-book'>BOOK A CAR RIDE</h1>
           <hr className="horizontal-line" />
@@ -38,3 +24,5 @@ export default function Reservations() {
     </>
   )
 }
+
+export default Reservations;

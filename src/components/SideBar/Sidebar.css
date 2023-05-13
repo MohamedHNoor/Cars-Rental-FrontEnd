@@ -30,3 +30,8 @@
   justify-content: center;
   margin-bottom: 1rem;
 }
+@media  (max-width:1025px){
+  .sidebarWrapper {
+    display: none!important;
+  }
+}

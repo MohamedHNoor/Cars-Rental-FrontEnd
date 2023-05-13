@@ -22,8 +22,6 @@ function Slider(props) {
       <div className="slider-title"> 
         <h2 >Latest Models</h2>
       <span >Please select a model</span></div>
-   
-    <div style={{width: '90%',position: 'relative'}}>
       <div className="slider-btns">
       <div className="swiper-prev">
           <IoIosArrowBack />
@@ -32,9 +30,22 @@ function Slider(props) {
           <IoIosArrowForward />
         </div>
         </div>
+<div style={{width: '90%',position: 'relative'}} className="responsive-slider"> 
+    
       <Swiper
       spaceBetween={50}
       slidesPerView={2}
+      breakpoints= {
+{300: {
+  slidesPerView: 1,
+  spaceBetween: 100,
+    },
+  
+    1024: {
+idesPerView: 2,
+      spaceBetween: 50,
+    },}
+      }
       modules={[Navigation]}
       navigation={{
         nextEl: '.swiper-next',

@@ -3,7 +3,6 @@ import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 // import frtchCars from './components/';
 import Homepage from './pages/homepage';
-import LifeStyle from './pages/lifestyle';
 import CarHistory from './components/CarHistory/CarHistory';
 import Reservationpage from './pages/reservationpage';
 import Detailspage from './pages/detailspage';

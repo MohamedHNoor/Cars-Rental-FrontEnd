@@ -61,6 +61,17 @@
   border: none;
 }
 
+.button-b-form {
+  font-size: 1vw;
+  width: 10vw;
+  border-radius: 50px;
+  background-color:#96cf2c;
+  color: white;
+  font-weight: 400;
+  padding: 0.5vw;
+  border: none;
+}
+
 .add-input {
   font-size: 1.5vw;
   width: 30vw;

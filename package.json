@@ -19,7 +19,9 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.7.3",
     "react-select-country-list": "^2.2.3",
+    "react-toastify": "^9.1.2",
     "redux": "^4.2.1",
+    "styled-components": "^6.0.0-rc.1",
     "swiper": "^9.2.4",
     "web-vitals": "^2.1.4"
   },

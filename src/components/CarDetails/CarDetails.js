@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { carOptions } from '../../data';
 import { Link } from "react-router-dom";
 import {IoIosArrowForward} from 'react-icons/io'
 import {FiSettings} from 'react-icons/fi'
@@ -20,14 +19,15 @@ function CarDetails() {
  
 
   return (
-    <div className="car-details-container d-flex">
-      <div className="d-flex flex-column">
-      <img src={singleCar.photo} alt={singleCar.name} style={{width: '100%'}} />
-      <button className="back-btn" ><BiLeftArrow  fill="white"/></button>
+<div className="car-details-container d-flex w-100">
+<div  className="d-flex flex-column w-100 justify-content-start align-items-center">
+        <div className="img-container"><img src={singleCar.photo} alt={singleCar.name} style={{width: '100%'}} /></div>
+      
+     
       </div>
       
       <div className="d-flex flex-column justify-content-start align-items-center gap-4">
-      <h2>{singleCar.name}</h2>
+  <h2> <Link to="/"><button className="back-btn" ><BiLeftArrow  fill="white"/></button></Link>{singleCar.name}</h2>
       <ul>
         <li className="d-flex">
           <div>Finance fee</div>

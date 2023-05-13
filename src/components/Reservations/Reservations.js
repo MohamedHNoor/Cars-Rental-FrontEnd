@@ -16,7 +16,6 @@ function Reservations(props) {
     pick_up: pickUpDate.toISOString(), // Convert date to string format accepted by the API
     return_date: returnDate.toISOString(), // Convert date to string format accepted by the API
     car_id: 0, // initially set to 0
-    user_id: 1, // Set to current user
   });
 
 

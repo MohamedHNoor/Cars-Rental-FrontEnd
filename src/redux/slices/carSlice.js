@@ -33,7 +33,7 @@ export const deleteCar = createAsyncThunk(
     try {
       const response = await axios.delete(`${BASE_URL}/cars/${id}`, {
         headers: {
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.i9Nwr63d6lUGxx_ORpgOyQ1Qo-u_VbguRzHj8SHOGYQ`,
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.mEV1tGfbNab0HJZatFjrXdDNgolA6mf4oUgC_im6TA8`,
         },
       });
       return response.data;
@@ -49,7 +49,7 @@ export const createNewCar = createAsyncThunk(
     try {
       const response = await axios.post(`${BASE_URL}/cars`, carData, {
         headers: {
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.i9Nwr63d6lUGxx_ORpgOyQ1Qo-u_VbguRzHj8SHOGYQ`,
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.mEV1tGfbNab0HJZatFjrXdDNgolA6mf4oUgC_im6TA8`,
         },
       });
       return response.data;
@@ -66,7 +66,7 @@ export const createReservation = createAsyncThunk(
     try {
       const response = await axios.post(`${BASE_URL}/reservations`, reservationData, {
         headers: {
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyfQ.i9Nwr63d6lUGxx_ORpgOyQ1Qo-u_VbguRzHj8SHOGYQ`,
+          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxfQ.mEV1tGfbNab0HJZatFjrXdDNgolA6mf4oUgC_im6TA8`,
         },
       });
       console.log(response.data)

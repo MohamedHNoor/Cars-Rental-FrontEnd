@@ -1,4 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+// import frtchCars from './components/';
 import Homepage from './pages/homepage';
 import LifeStyle from './pages/lifestyle';
 import CarHistory from './components/CarHistory/CarHistory';
@@ -12,13 +15,13 @@ import Reservationshistory from './pages/reservationshistory';
 import LoginPage from './pages/LoginPage';
 import Error from './pages/Error';
 import ProtectedRoute from './pages/ProtectedRoute';
+import { fetchCars } from './redux/slices/carSlice';
 
 function App() {
-
   const dispatch = useDispatch();
-  useEffect(()=> {
-    dispatch(fetchCars())
-  },[])
+  useEffect(() => {
+    dispatch(fetchCars());
+  }, []);
 
   return (
     <div className="App">
@@ -32,8 +35,6 @@ function App() {
               </ProtectedRoute>
             }
           />
-
-          {/* <Route path="/lifestyle" element={<LifeStyle />} /> */}
           <Route path="/bookride" element={<Appointments />} />
           <Route path="/addItem" element={<Reservationpage />} />
           <Route path="/deleteItem" element={<Reservationshistory />} />

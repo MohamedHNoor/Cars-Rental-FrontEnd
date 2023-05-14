@@ -64,19 +64,22 @@ export const createNewCar = createAsyncThunk(
   }
 );
 
-
 export const createReservation = createAsyncThunk(
   "cars/createReservation",
   async (reservationData, { rejectWithValue }) => {
     try {
       const token = getUserFromLocalStorage();
       console.log("token: ", token);
-      const response = await axios.post(`${BASE_URL}/reservations`, reservationData, {
-        headers: {
-          Authorization: `Bearer ${token.token}`,
-        },
-      });
-      console.log(response.data)
+      const response = await axios.post(
+        `${BASE_URL}/reservations`,
+        reservationData,
+        {
+          headers: {
+            Authorization: `Bearer ${token.token}`,
+          },
+        }
+      );
+      console.log(response.data);
       return response.data;
     } catch (err) {
       console.error(err);
@@ -85,6 +88,23 @@ export const createReservation = createAsyncThunk(
   }
 );
 
+export const fetchReservations = createAsyncThunk(
+  "cars/fetchReservations",
+  async (_, { rejectWithValue }) => {
+    try {
+      const token = getUserFromLocalStorage();
+      console.log("token: ", token);
+      const response = await axios.get(`${BASE_URL}/reservations`, {
+        headers: {
+          Authorization: `Bearer ${token.token}`,
+        },
+      });
+      return response.data;
+    } catch (err) {
+      return rejectWithValue(await err.response.data);
+    }
+  }
+);
 
 const initialState = {
   cars: [],
@@ -105,7 +125,7 @@ export const carSlice = createSlice({
     },
     addReservation: (state, action) => {
       state.reservations.push(action.payload);
-    }
+    },
   },
   extraReducers: {
     [fetchCars.fulfilled]: (state, action) => {
@@ -120,7 +140,10 @@ export const carSlice = createSlice({
     },
     [createReservation.fulfilled]: (state, action) => {
       state.reservations.push(action.payload);
-    }
+    },
+    [fetchReservations.fulfilled]: (state, action) => {
+      state.reservations = action.payload;
+    },
   },
 });
 

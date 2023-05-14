@@ -39,7 +39,7 @@ const DateRange = ({
       <div className="d-flex flex-md-wrap gap-4">
         <div className="d-flex flex-column">
           <label
-            className="mb-2 text-white h5 text-md-center"
+            className="mb-2 text-white h6 text-md-center"
             htmlFor="start-date"
           >
             Start Date:
@@ -58,7 +58,7 @@ const DateRange = ({
 
         <div className="d-flex flex-column">
           <label
-            className="mb-2 text-white h5 text-md-center"
+            className="mb-2 text-white h6 text-md-center"
             htmlFor="start-date"
           >
             End Date:

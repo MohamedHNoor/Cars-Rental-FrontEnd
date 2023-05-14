@@ -11,6 +11,8 @@ function Reservations(props) {
   const { cars } = useSelector((state) => state.cars);
   const [selectedStartDate, setSelectedStartDate] = useState(new Date());
   const [selectedEndDate, setSelectedEndDate] = useState(new Date());
+  const [selectedCity, setSelectedCity] = useState("");
+
   console.log("Cars fetched: ", cars);
   const pickUpDate = new Date(2023, 5, 13); // Month is 0-based (0: January, 1: February, etc.)
   const returnDate = new Date(2023, 5, 29); // Month is 0-based (0: January, 1: February, etc.)
@@ -32,8 +34,13 @@ function Reservations(props) {
       // Update the car_id with the actual car_id value
       const carId = selectedCar.id;
       console.log("carID: ", carId);
-      const updatedReservationData = { ...reservationData, car_id: carId, pick_up: selectedStartDate.toISOString(),
-        return_date: selectedEndDate.toISOString(), };
+      const updatedReservationData = {
+        ...reservationData,
+        car_id: carId,
+        pick_up: selectedStartDate.toISOString(),
+        return_date: selectedEndDate.toISOString(),
+        city: selectedCity,
+      };
       dispatch(createReservation(updatedReservationData));
       navigate("/myreservations");
     }
@@ -78,12 +85,16 @@ function Reservations(props) {
                 ))}
               </select>
               <DateRange
-              selectedStartDate={selectedStartDate}
-              selectedEndDate={selectedEndDate}
-              onStartDateChange={setSelectedStartDate}
-              onEndDateChange={setSelectedEndDate}
+                selectedStartDate={selectedStartDate}
+                selectedEndDate={selectedEndDate}
+                onStartDateChange={setSelectedStartDate}
+                onEndDateChange={setSelectedEndDate}
               />
-              <select className="mb-4 add-input">
+              <select
+                className="mb-4 add-input"
+                value={selectedCity}
+                onChange={(e) => setSelectedCity(e.target.value)}
+              >
                 <option disabled selected value="">
                   Select City
                 </option>

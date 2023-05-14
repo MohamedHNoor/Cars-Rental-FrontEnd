@@ -21,7 +21,7 @@ function Reservations(props) {
     city: "london",
     pick_up: pickUpDate.toISOString(), // Convert date to string format accepted by the API
     return_date: returnDate.toISOString(), // Convert date to string format accepted by the API
-    car_id: 0, // initially set to 0
+    car_id: null, // initially set to 0
   });
 
   const handleBookNow = () => {
@@ -115,8 +115,8 @@ function Reservations(props) {
                   })
                 }
               >
-                <option disabled selected value="">
-                  Select car
+                <option value="" selected disabled>
+                  Select Car
                 </option>
                 {cars.map((car) => (
                   <option key={car.id} value={car.id}>

@@ -12,6 +12,7 @@ function Reservations(props) {
   const [selectedStartDate, setSelectedStartDate] = useState(new Date());
   const [selectedEndDate, setSelectedEndDate] = useState(new Date());
   const [selectedCity, setSelectedCity] = useState("");
+  const [fieldError, setFieldError] = useState(false);
 
   console.log("Cars fetched: ", cars);
   const pickUpDate = new Date(2023, 5, 13); // Month is 0-based (0: January, 1: February, etc.)
@@ -24,6 +25,19 @@ function Reservations(props) {
   });
 
   const handleBookNow = () => {
+    // Check if any required field is empty
+    if (
+      !reservationData.car_id ||
+      !selectedStartDate ||
+      !selectedEndDate ||
+      !selectedCity
+    ) {
+      setFieldError(true);
+      setTimeout(() => {
+        setFieldError(false);
+      }, 3000);
+      return;
+    }
     // Find the selected car based on its id
     const selectedCar = cars.find(
       (car) => car.id === parseInt(reservationData.car_id)
@@ -53,6 +67,32 @@ function Reservations(props) {
 
         <div className="wrapper-reservation background-tint">
           <div className="container w-50">
+            {fieldError && (
+              <p className="error-message alert alert-danger mt-2">
+                Please fill in the following required fields:
+                {!reservationData.car_id && (
+                  <>
+                    <span className="me-2 text-danger">Car</span>
+                  </>
+                )}
+                {!selectedStartDate && (
+                  <>
+                    <span className="me-2 text-danger">Start Date</span>
+                  </>
+                )}
+                {!selectedEndDate && (
+                  <>
+                    <span className="me-2 text-danger">End Date</span>
+                  </>
+                )}
+                {!selectedCity && (
+                  <>
+                    <span className="me-2 text-danger">City</span>
+                  </>
+                )}
+              </p>
+            )}
+
             <h1 className="header-book">BOOK A CAR RIDE</h1>
             <hr className="horizontal-line" />
             <p className="description">

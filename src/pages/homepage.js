@@ -1,12 +1,15 @@
 import React from 'react';
 import Slider from "../components/Slider/Slider";
-import Swiper from "swiper";
 import '../components/Slider/Slider.css'
 import SideBar from "../components/SideBar/Sidebar";
+import BigSidebar from "../components/BigSidebar/BigSidebar";
+import SmallSidebar from "../components/SmallSidebar/SmallSidebar";
 function Homepage(props) {
   return (
     <div className="sliderwrapper">
-      <SideBar />
+      {/* <SideBar /> */}
+      <BigSidebar />
+      <SmallSidebar />
       <div className="sliderWrapper">
         <Slider />
       </div>

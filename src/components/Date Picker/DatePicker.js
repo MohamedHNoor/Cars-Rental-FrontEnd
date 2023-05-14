@@ -11,40 +11,26 @@ const DateRange = ({
   const [startDate, setStartDate] = useState(selectedStartDate);
   const [endDate, setEndDate] = useState(selectedEndDate);
 
-  useEffect(() => {
-    if (!selectedStartDate) {
-      setEndDate(null);
-      onEndDateChange(null);
-    }
-  }, [selectedStartDate, onEndDateChange]);
+  // useEffect(() => {
+  //   if (!selectedStartDate) {
+  //     setEndDate(null);
+  //     onEndDateChange(null);
+  //   }
+  // }, [selectedStartDate, onEndDateChange]);
 
   const handleStartDateChange = (date) => {
     setStartDate(date);
     onStartDateChange(date);
-    if (!selectedEndDate || date > selectedEndDate) {
-      setEndDate(null);
-      onEndDateChange(null);
-    }
+    const returnDate = new Date(date);
+    returnDate.setDate(returnDate.getDate() + 1);
+    setEndDate(returnDate);
+    onEndDateChange(returnDate);
   };
 
   const handleEndDateChange = (date) => {
     setEndDate(date);
     onEndDateChange(date);
   };
-
-  useEffect(() => {
-    if (selectedStartDate && !selectedEndDate) {
-      setEndDate(null);
-      onEndDateChange(null);
-    }
-  }, [selectedStartDate, selectedEndDate, onEndDateChange]);
-
-  useEffect(() => {
-    if (selectedStartDate && selectedEndDate && selectedEndDate < selectedStartDate) {
-      setEndDate(null);
-      onEndDateChange(null);
-    }
-  }, [selectedStartDate, selectedEndDate, onEndDateChange]);
 
   return (
     <>
@@ -73,7 +59,7 @@ const DateRange = ({
         endDate={selectedEndDate}
         minDate={selectedStartDate}
         placeholderText="Select end date"
-        disabled={!selectedStartDate} // Disable the end date if no start date is selected
+        // disabled={!selectedStartDate} // Disable the end date if no start date is selected
       />
     </>
   );

@@ -113,7 +113,7 @@ function Reservations(props) {
               />
               <div className="d-flex flex-md-wrap gap-4">
                 <select
-                  className="select-car"
+                  className="select-car mb-4"
                   value={reservationData.car_id}
                   onChange={(e) =>
                     setReservationData({

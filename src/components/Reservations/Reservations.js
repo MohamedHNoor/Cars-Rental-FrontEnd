@@ -104,7 +104,7 @@ function Reservations(props) {
               veniam nihil officia, impedit quibusdam perferendis laudantium
               sequi odio?
             </p>
-            <div className="d-flex flex-column gap-2 justify-content-center align-items-baseline ">
+            <div className="d-flex flex-column gap-2 justify-content-center align-items-baseline">
               <DateRange
                 selectedStartDate={selectedStartDate}
                 selectedEndDate={selectedEndDate}
@@ -146,11 +146,14 @@ function Reservations(props) {
                   <option value="Bristol">Bristol</option>
                 </select>
               </div>
-
-              <button type="button" onClick={handleBookNow} className="button-book-now m-auto mt-4 w-100">
-                Book Now
-              </button>
             </div>
+            <button
+              type="button"
+              onClick={handleBookNow}
+              className="button-book-now w-50 mt-4"
+            >
+              Book Now
+            </button>
           </div>
         </div>
       </div>

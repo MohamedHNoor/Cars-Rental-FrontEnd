@@ -9,14 +9,16 @@ const DateRange = ({
   onEndDateChange,
 }) => {
   const [startDate, setStartDate] = useState(selectedStartDate);
-  const [endDate, setEndDate] = useState(selectedEndDate);
+  const [endDate, setEndDate] = useState(null);
 
-  // useEffect(() => {
-  //   if (!selectedStartDate) {
-  //     setEndDate(null);
-  //     onEndDateChange(null);
-  //   }
-  // }, [selectedStartDate, onEndDateChange]);
+  useEffect(() => {
+    if (selectedStartDate) {
+      const returnDate = new Date(selectedStartDate);
+      returnDate.setDate(returnDate.getDate() + 1);
+      setEndDate(returnDate);
+      onEndDateChange(returnDate);
+    }
+  }, [selectedStartDate, onEndDateChange]);
 
   const handleStartDateChange = (date) => {
     setStartDate(date);
@@ -34,33 +36,46 @@ const DateRange = ({
 
   return (
     <>
-      <label className="mb-2 text-white h5" htmlFor="start-date">
-        Start Date:
-      </label>
-      <DatePicker
-        className="mb-4 add-input"
-        selected={selectedStartDate}
-        onChange={handleStartDateChange}
-        selectsStart
-        startDate={startDate}
-        endDate={selectedEndDate}
-        placeholderText="Select start date"
-        minDate={new Date()} // this is to disable past dates
-      />
-      <label className="mb-2 text-white h5" htmlFor="start-date">
-        End Date:
-      </label>
-      <DatePicker
-        className="mb-4 add-input"
-        selected={selectedEndDate}
-        onChange={handleEndDateChange}
-        selectsEnd
-        startDate={startDate}
-        endDate={selectedEndDate}
-        minDate={selectedStartDate}
-        placeholderText="Select end date"
-        // disabled={!selectedStartDate} // Disable the end date if no start date is selected
-      />
+      <div className="d-flex flex-md-wrap gap-4">
+        <div className="d-flex flex-column">
+          <label
+            className="mb-2 text-white h5 text-md-center"
+            htmlFor="start-date"
+          >
+            Start Date:
+          </label>
+          <DatePicker
+            className="mb-4 select-car"
+            selected={selectedStartDate}
+            onChange={handleStartDateChange}
+            selectsStart
+            startDate={startDate}
+            endDate={selectedEndDate}
+            placeholderText="Select start date"
+            minDate={new Date()} // this is to disable past dates
+          />
+        </div>
+
+        <div className="d-flex flex-column">
+          <label
+            className="mb-2 text-white h5 text-md-center"
+            htmlFor="start-date"
+          >
+            End Date:
+          </label>
+          <DatePicker
+            className="mb-4 select-car"
+            selected={selectedEndDate}
+            onChange={handleEndDateChange}
+            selectsEnd
+            startDate={startDate}
+            endDate={selectedEndDate}
+            minDate={selectedStartDate}
+            placeholderText="Select end date"
+            // disabled={!selectedStartDate} // Disable the end date if no start date is selected
+          />
+        </div>
+      </div>
     </>
   );
 };

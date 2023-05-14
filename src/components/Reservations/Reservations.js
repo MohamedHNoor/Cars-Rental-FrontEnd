@@ -105,46 +105,49 @@ function Reservations(props) {
               sequi odio?
             </p>
             <div className="d-flex flex-column gap-2 justify-content-center align-items-baseline ">
-              <select
-                className="select-car"
-                value={reservationData.car_id}
-                onChange={(e) =>
-                  setReservationData({
-                    ...reservationData,
-                    car_id: e.target.value,
-                  })
-                }
-              >
-                <option value="" selected disabled>
-                  Select Car
-                </option>
-                {cars.map((car) => (
-                  <option key={car.id} value={car.id}>
-                    {car.name}
-                  </option>
-                ))}
-              </select>
               <DateRange
                 selectedStartDate={selectedStartDate}
                 selectedEndDate={selectedEndDate}
                 onStartDateChange={setSelectedStartDate}
                 onEndDateChange={setSelectedEndDate}
               />
-              <select
-                className="mb-4 add-input"
-                value={selectedCity}
-                onChange={(e) => setSelectedCity(e.target.value)}
-              >
-                <option disabled selected value="">
-                  Select City
-                </option>
-                <option value="London">London</option>
-                <option value="Manchester">Manchester</option>
-                <option value="Glasgow">Glasgow</option>
-                <option value="Bristol">Bristol</option>
-              </select>
+              <div className="d-flex flex-md-wrap gap-4">
+                <select
+                  className="select-car"
+                  value={reservationData.car_id}
+                  onChange={(e) =>
+                    setReservationData({
+                      ...reservationData,
+                      car_id: e.target.value,
+                    })
+                  }
+                >
+                  <option value="" selected disabled>
+                    Select Car
+                  </option>
+                  {cars.map((car) => (
+                    <option key={car.id} value={car.id}>
+                      {car.name}
+                    </option>
+                  ))}
+                </select>
 
-              <button type="button" onClick={handleBookNow} className="button">
+                <select
+                  className="mb-4 select-car"
+                  value={selectedCity}
+                  onChange={(e) => setSelectedCity(e.target.value)}
+                >
+                  <option disabled selected value="">
+                    Select City
+                  </option>
+                  <option value="London">London</option>
+                  <option value="Manchester">Manchester</option>
+                  <option value="Glasgow">Glasgow</option>
+                  <option value="Bristol">Bristol</option>
+                </select>
+              </div>
+
+              <button type="button" onClick={handleBookNow} className="button-book-now m-auto mt-4 w-100">
                 Book Now
               </button>
             </div>

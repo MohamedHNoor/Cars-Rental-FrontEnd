@@ -61,11 +61,25 @@
   border: none;
 }
 
+.button-book-now {
+  font-size: 1vw;
+  border-radius: 50px;
+  border: 1px outset #fff;
+  outline-offset: 0.25rem;
+  outline: 0.15rem solid rgb(73, 87, 23);
+  font-weight: 400 !important;
+  background-color: #96cf2c;
+  color: #fff !important;
+  color: white;
+  padding: 0.5vw;
+  border: none;
+}
+
 .button-b-form {
   font-size: 1vw;
   width: 10vw;
   border-radius: 50px;
-  background-color:#96cf2c;
+  background-color: #96cf2c;
   color: white;
   font-weight: 400;
   padding: 0.5vw;

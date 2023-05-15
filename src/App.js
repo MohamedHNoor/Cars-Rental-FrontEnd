@@ -36,12 +36,54 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="/bookride" element={<Appointments />} />
-          <Route path="/addItem" element={<Reservationpage />} />
-          <Route path="/deleteItem" element={<Reservationshistory />} />
-          <Route path="/detailsPage/:id" element={<Detailspage />} />
-          <Route path="/reservations/add" element={<AddReservations />} />
-          <Route path="/myreservations" element={<MyReservations />} />
+          <Route
+            path="/bookride"
+            element={
+              <ProtectedRoute>
+                <Appointments />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/addItem"
+            element={
+              <ProtectedRoute>
+                <Reservationpage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/deleteItem"
+            element={
+              <ProtectedRoute>
+                <Reservationshistory />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/detailsPage/:id"
+            element={
+              <ProtectedRoute>
+                <Detailspage />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/reservations/add"
+            element={
+              <ProtectedRoute>
+                <AddReservations />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/myreservations"
+            element={
+              <ProtectedRoute>
+                <MyReservations />
+              </ProtectedRoute>
+            }
+          />
           <Route path="/register" element={<LoginPage />} />
           <Route path="/*" element={<Error />} />
         </Routes>

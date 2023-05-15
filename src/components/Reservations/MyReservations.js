@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import SideBar from "../SideBar/Sidebar";
+import BigSidebar from "../BigSidebar/BigSidebar";
+import SmallSidebar from "../SmallSidebar/SmallSidebar";
 import { fetchReservations } from "../../redux/slices/carSlice";
 
 const MyReservations = () => {
@@ -13,7 +14,8 @@ const MyReservations = () => {
   return (
     <>
       <div className="sliderwrapper">
-        <SideBar />
+        <BigSidebar />
+        <SmallSidebar />
         <div className="wrapper-my-reservation background-tint">
           <h2>MyReservations</h2>
           {reservations.map((reservation) => (

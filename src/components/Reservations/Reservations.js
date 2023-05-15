@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import SideBar from "../SideBar/Sidebar";
+import BigSidebar from "../BigSidebar/BigSidebar";
+import SmallSidebar from "../SmallSidebar/SmallSidebar";
 import { createReservation } from "../../redux/slices/carSlice";
 import DateRange from "../Date Picker/DatePicker";
 import "react-datepicker/dist/react-datepicker.css";
@@ -63,7 +64,8 @@ function Reservations(props) {
   return (
     <>
       <div className="sliderwrapper">
-        <SideBar />
+        <BigSidebar />
+        <SmallSidebar />
 
         <div className="wrapper-reservation background-tint">
           <div className="container w-50">

@@ -62,7 +62,7 @@
 }
 
 .button-book-now {
-  font-size: 1vw;
+  font-size: 1.75vw;
   border-radius: 50px;
   border: 1px outset #fff;
   outline-offset: 0.25rem;
@@ -72,7 +72,6 @@
   color: #fff !important;
   color: white;
   padding: 0.5vw;
-  border: none;
 }
 
 .button-b-form {

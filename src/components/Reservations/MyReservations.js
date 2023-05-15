@@ -3,14 +3,20 @@ import { useDispatch, useSelector } from "react-redux";
 import BigSidebar from "../BigSidebar/BigSidebar";
 import SmallSidebar from "../SmallSidebar/SmallSidebar";
 import { fetchReservations } from "../../redux/slices/carSlice";
+import { deleteReservation } from "../../redux/slices/carSlice";
 
 const MyReservations = () => {
   const dispatch = useDispatch();
   const reservations = useSelector((state) => state.cars.reservations);
-  console.log("res: ", reservations);
   useEffect(() => {
     dispatch(fetchReservations());
   }, [dispatch]);
+  const handleDelete = (id) => {
+    dispatch(deleteReservation(id));
+  };
+  useEffect(() => {
+    dispatch(fetchReservations()); // Fetch reservations again when the state changes
+  }, [dispatch, reservations]);
   return (
     <>
       <div className="sliderwrapper">
@@ -24,6 +30,12 @@ const MyReservations = () => {
               <p>City: {reservation.city}</p>
               <p>Pick-up Date: {reservation.pick_up}</p>
               <p>Return Date: {reservation.return_date}</p>
+              <button
+                className="btn btn-danger"
+                onClick={() => handleDelete(reservation.id)}
+              >
+                Delete
+              </button>
             </div>
           ))}
         </div>

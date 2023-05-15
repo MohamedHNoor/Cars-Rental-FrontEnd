@@ -106,6 +106,24 @@ export const fetchReservations = createAsyncThunk(
   }
 );
 
+export const deleteReservation = createAsyncThunk(
+  "cars/deleteReservation",
+  async (id, { rejectWithValue }) => {
+    try {
+      const token = getUserFromLocalStorage();
+      console.log("token: ", token);
+      const response = await axios.delete(`${BASE_URL}/reservations/${id}`, {
+        headers: {
+          Authorization: `Bearer ${token.token}`,
+        },
+      });
+      return response.data;
+    } catch (err) {
+      return rejectWithValue(await err.response.data);
+    }
+  }
+);
+
 const initialState = {
   cars: [],
   singleCar: {},
@@ -143,6 +161,11 @@ export const carSlice = createSlice({
     },
     [fetchReservations.fulfilled]: (state, action) => {
       state.reservations = action.payload;
+    },
+    [deleteReservation.fulfilled]: (state, action) => {
+      state.reservations = state.reservations.filter(
+        (reservation) => reservation.id !== action.payload
+      );
     },
   },
 });

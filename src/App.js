@@ -1,7 +1,8 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-// import frtchCars from './components/';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Homepage from './pages/homepage';
 import CarHistory from './components/CarHistory/CarHistory';
 import Reservationpage from './pages/reservationpage';
@@ -43,6 +44,7 @@ function App() {
           <Route path="/register" element={<LoginPage />} />
           <Route path="/*" element={<Error />} />
         </Routes>
+        <ToastContainer position="top-center" />
       </BrowserRouter>
     </div>
   );

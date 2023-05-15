@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import BigSidebar from "../BigSidebar/BigSidebar";
 import SmallSidebar from "../SmallSidebar/SmallSidebar";
 import { createReservation } from "../../redux/slices/carSlice";
@@ -14,6 +14,9 @@ function Reservations(props) {
   const [selectedEndDate, setSelectedEndDate] = useState(new Date());
   const [selectedCity, setSelectedCity] = useState("");
   const [fieldError, setFieldError] = useState(false);
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const initialCarId = searchParams.get("carId");
 
   console.log("Cars fetched: ", cars);
   const pickUpDate = new Date(2023, 5, 13); // Month is 0-based (0: January, 1: February, etc.)
@@ -22,7 +25,7 @@ function Reservations(props) {
     city: "london",
     pick_up: pickUpDate.toISOString(), // Convert date to string format accepted by the API
     return_date: returnDate.toISOString(), // Convert date to string format accepted by the API
-    car_id: null, // initially set to 0
+    car_id: initialCarId ? parseInt(initialCarId) : null,
   });
 
   const handleBookNow = () => {
@@ -116,7 +119,7 @@ function Reservations(props) {
               <div className="d-flex flex-md-wrap gap-4">
                 <select
                   className="select-car mb-4"
-                  value={reservationData.car_id}
+                  value={reservationData.car_id || initialCarId}
                   onChange={(e) =>
                     setReservationData({
                       ...reservationData,

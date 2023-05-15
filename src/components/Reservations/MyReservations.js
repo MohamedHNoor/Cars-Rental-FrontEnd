@@ -23,13 +23,13 @@ const MyReservations = () => {
         <BigSidebar />
         <SmallSidebar />
         <div className="wrapper-my-reservation background-tint overflow-auto">
-          <h2 className="text-white text-center my-3 h1  bg-dark bg-opacity-75 p-2">
+          <h2 className="text-white text-center my-3 h1  bg-dark p-2">
             My Reservations
           </h2>
           <div className="d-flex flex-wrap gap-5 my-4 ms-4 overflow-auto">
             {reservations.map((reservation) => (
               <div
-                className="d-flex flex-column flex-wrap border text-white rounded border-white p-3 bg-dark bg-opacity-25"
+                className="d-flex flex-column flex-wrap border text-white rounded border-white p-3 bg-dark bg-opacity-50"
                 key={reservation.id}
               >
                 <h2 className="text-decoration-underline">{reservation.car}</h2>

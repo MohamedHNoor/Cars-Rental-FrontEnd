@@ -29,7 +29,7 @@ const MyReservations = () => {
           <div className="row justify-content-center p-3">
             {reservations.map((reservation) => (
               <div
-                className="col-10 col-md-6 col-lg-4 col-xl-3 my-4"
+                className="col-10 col-md-6 col-lg-4 col-xl-3 my-4 text-center"
                 key={reservation.id}
               >
                 <div className="card text-white bg-dark bg-opacity-75  border ">

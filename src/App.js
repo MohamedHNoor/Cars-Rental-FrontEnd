@@ -7,7 +7,7 @@ import Homepage from "./pages/homepage";
 import CarHistory from "./components/CarHistory/CarHistory";
 import Reservationpage from "./pages/reservationpage";
 import Detailspage from "./pages/detailspage";
-import Appointments from "./components/Reservations/Reservations";
+import Reservations from "./components/Reservations/Reservations";
 import AddReservations from "./components/Reservations/AddReservations";
 import MyReservations from "./components/Reservations/MyReservations";
 import "./App.css";
@@ -39,7 +39,7 @@ function App() {
             path="/bookride"
             element={
               <ProtectedRoute>
-                <Appointments />
+                <Reservations />
               </ProtectedRoute>
             }
           />

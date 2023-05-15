@@ -96,15 +96,6 @@ function Reservations(props) {
 
             <h1 className="header-book">BOOK A CAR RIDE</h1>
             <hr className="horizontal-line" />
-            <p className="description">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
-              vitae expedita, eaque nisi laudantium aliquam sapiente excepturi
-              dolorem fugiat ipsum reiciendis ex mollitia reprehenderit ipsa
-              fugit tempore iusto blanditiis ratione accusamus esse cupiditate?
-              Expedita optio corporis quaerat doloribus facere possimus cum
-              veniam nihil officia, impedit quibusdam perferendis laudantium
-              sequi odio?
-            </p>
             <div className="d-flex flex-column gap-2 justify-content-center align-items-baseline">
               <DateRange
                 selectedStartDate={selectedStartDate}

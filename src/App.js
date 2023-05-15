@@ -8,7 +8,6 @@ import CarHistory from "./components/CarHistory/CarHistory";
 import Reservationpage from "./pages/reservationpage";
 import Detailspage from "./pages/detailspage";
 import Reservations from "./components/Reservations/Reservations";
-import AddReservations from "./components/Reservations/AddReservations";
 import MyReservations from "./components/Reservations/MyReservations";
 import "./App.css";
 import Reservationshistory from "./pages/reservationshistory";
@@ -67,14 +66,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route
-            path="/reservations/add"
-            element={
-              <ProtectedRoute>
-                <AddReservations />
-              </ProtectedRoute>
-            }
-          />
+      
           <Route
             path="/myreservations"
             element={

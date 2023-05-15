@@ -17,8 +17,6 @@ function Reservations(props) {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const initialCarId = searchParams.get("carId");
-
-  console.log("Cars fetched: ", cars);
   const pickUpDate = new Date(2023, 5, 13); // Month is 0-based (0: January, 1: February, etc.)
   const returnDate = new Date(2023, 5, 29); // Month is 0-based (0: January, 1: February, etc.)
   const [reservationData, setReservationData] = useState({
@@ -46,12 +44,10 @@ function Reservations(props) {
     const selectedCar = cars.find(
       (car) => car.id === parseInt(reservationData.car_id)
     );
-    console.log("selected car: ", selectedCar);
-    console.log("reservationData: ", reservationData.car_id);
+
     if (selectedCar) {
       // Update the car_id with the actual car_id value
       const carId = selectedCar.id;
-      console.log("carID: ", carId);
       const updatedReservationData = {
         ...reservationData,
         car_id: carId,

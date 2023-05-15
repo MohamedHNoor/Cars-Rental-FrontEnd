@@ -60,6 +60,8 @@ function Reservations(props) {
     }
   };
 
+
+
   return (
     <>
       <div className="sliderwrapper">
@@ -142,7 +144,7 @@ function Reservations(props) {
             <button
               type="button"
               onClick={handleBookNow}
-              className="button-book-now w-50 mt-4"
+              className="button-book-now w-25 mt-4"
             >
               Book Now
             </button>

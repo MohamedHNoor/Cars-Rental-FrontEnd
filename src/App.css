@@ -62,12 +62,12 @@
 }
 
 .button-book-now {
-  font-size: 1.75vw;
+  font-size: 1.25vw;
   border-radius: 50px;
   border: 1px outset #fff;
   outline-offset: 0.25rem;
   outline: 0.15rem solid rgb(73, 87, 23);
-  font-weight: 400 !important;
+  font-weight: 700 !important;
   background-color: #96cf2c;
   color: #fff !important;
   color: white;

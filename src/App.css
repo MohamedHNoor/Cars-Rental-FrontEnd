@@ -2,12 +2,21 @@
   background-image: url("https://www.pngmart.com/files/4/Corvette-Car-Transparent-Background.png");
   background-size: cover;
   background-position: center;
+  width: 100%;
 }
 
 .wrapper-add-reservation {
   background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/Luxury-Car-PNG-Image-HD.png");
   background-size: cover;
   background-position: center;
+  width: 100%;
+}
+
+.wrapper-my-reservation {
+  background-image: url("https://image.cnbcfm.com/api/v1/image/102979390-P90196605-highRes.jpg?v=1441738507&w=1600&h=900");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
 }
 
 .background-tint {
@@ -48,6 +57,30 @@
   border-radius: 50px;
   background-color: white;
   color: green;
+  padding: 0.5vw;
+  border: none;
+}
+
+.button-book-now {
+  font-size: 1.75vw;
+  border-radius: 50px;
+  border: 1px outset #fff;
+  outline-offset: 0.25rem;
+  outline: 0.15rem solid rgb(73, 87, 23);
+  font-weight: 400 !important;
+  background-color: #96cf2c;
+  color: #fff !important;
+  color: white;
+  padding: 0.5vw;
+}
+
+.button-b-form {
+  font-size: 1vw;
+  width: 10vw;
+  border-radius: 50px;
+  background-color: #96cf2c;
+  color: white;
+  font-weight: 400;
   padding: 0.5vw;
   border: none;
 }

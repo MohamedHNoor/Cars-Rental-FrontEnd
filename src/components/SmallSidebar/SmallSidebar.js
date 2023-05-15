@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { FaAlignLeft, FaTimes } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
+import { AiOutlineMenu } from 'react-icons/ai';
 import Wrapper from '../../assets/Wrappers/SmallSidebar';
 import NavLinks from '../Navlinks/NavLinks';
 import Logo from '../../assets/logo.png';
@@ -41,7 +42,7 @@ const SmallSidebar = () => {
         className="toggle-btn"
         onClick={handleToggleSidebar}
       >
-        <FaAlignLeft />
+        <AiOutlineMenu />
       </button>
       <div className={`sidebar-container ${showSidebar ? 'show-sidebar' : ''}`}>
         <div className="content">

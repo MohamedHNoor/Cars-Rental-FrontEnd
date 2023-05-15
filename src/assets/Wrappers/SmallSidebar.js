@@ -44,7 +44,7 @@ const Wrapper = styled.aside`
   }
 
   .toggle-btn {
-    color: #96bf01;
+    color: #000;
   }
 
   .logo {

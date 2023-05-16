@@ -25,31 +25,24 @@
     background-blend-mode: multiply;
   }
 
-  .description {
-    color: #fff !important;
-    font-size: 1vw;
-    text-align: center;
-  }
-
   .select-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    margin: auto auto;
-
+    gap: 1.5rem;
   }
 
   .header-book {
-    font-size: 2vw;
+    font-size: 6vw;
     color: #fff;
     letter-spacing: 0.25em;
     word-spacing: 0.1em;
     font-weight: 500;
+    text-align: center;
   }
 
   .horizontal-line {
     border: 1px solid #fff;
-    width: 80%;
+    width: 100%;
   }
 
   .container {
@@ -71,7 +64,7 @@
   }
 
   .button-book-now {
-    font-size: 1.25vw;
+    font-size: 4.5vw;
     border-radius: 50px;
     border: 1px outset #fff;
     outline-offset: 0.25rem;
@@ -80,7 +73,7 @@
     background-color: #96cf2c;
     color: #fff;
     padding: 0.5vw;
-    width: 15%;
+    width: 60%;
   }
 
   .button-book-now:hover {
@@ -142,8 +135,8 @@
   }
 
   .select-car {
-    font-size: 1vw;
-    width: 10vw;
+    font-size: 4vw;
+    width: 30vw;
     border-radius: 50px;
     background-color: white;
     color: green;
@@ -241,7 +234,7 @@
     background-color: #96cf2c;
     color: #fff;
     padding: 0.5vw;
-    width: 15%;
+    width: 25%;
   }
 
   .button-book-now:hover {

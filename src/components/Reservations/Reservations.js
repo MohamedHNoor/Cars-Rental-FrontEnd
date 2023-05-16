@@ -105,7 +105,7 @@ function Reservations(props) {
                 onStartDateChange={setSelectedStartDate}
                 onEndDateChange={setSelectedEndDate}
               />
-              <div className="d-flex flex-md-wrap gap-4">
+              <div className="select-container">
                 <select
                   className="select-car mb-4"
                   value={reservationData.car_id || initialCarId}

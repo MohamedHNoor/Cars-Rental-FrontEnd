@@ -1,152 +1,323 @@
-.wrapper-reservation {
-  background-image: url("https://www.pngmart.com/files/4/Corvette-Car-Transparent-Background.png");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
+@media screen and (max-width: 767px) {
+  .wrapper-reservation {
+    background-image: url("https://www.pngmart.com/files/4/Corvette-Car-Transparent-Background.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  .wrapper-add-reservation {
+    background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/Luxury-Car-PNG-Image-HD.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  .wrapper-my-reservation {
+    background-image: url("https://image.cnbcfm.com/api/v1/image/102979390-P90196605-highRes.jpg?v=1441738507&w=1600&h=900");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  .background-tint {
+    background-color: #96cf2c; /* Green tint */
+    background-blend-mode: multiply;
+  }
+
+  .description {
+    color: #fff !important;
+    font-size: 1vw;
+    text-align: center;
+  }
+
+  .select-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto auto;
+
+  }
+
+  .header-book {
+    font-size: 2vw;
+    color: #fff;
+    letter-spacing: 0.25em;
+    word-spacing: 0.1em;
+    font-weight: 500;
+  }
+
+  .horizontal-line {
+    border: 1px solid #fff;
+    width: 80%;
+  }
+
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .button {
+    font-size: 1vw;
+    width: 10vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.5vw;
+    border: none;
+  }
+
+  .button-book-now {
+    font-size: 1.25vw;
+    border-radius: 50px;
+    border: 1px outset #fff;
+    outline-offset: 0.25rem;
+    outline: 0.15rem solid rgb(73, 87, 23);
+    font-weight: 500;
+    background-color: #96cf2c;
+    color: #fff;
+    padding: 0.5vw;
+    width: 15%;
+  }
+
+  .button-book-now:hover {
+    background-color: #fff;
+    color: green;
+    transform: scale3d(1.05, 1.05, 1.05);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .button-b-form {
+    font-size: 1vw;
+    width: 10vw;
+    border-radius: 50px;
+    background-color: #96cf2c;
+    color: white;
+    font-weight: 400;
+    padding: 0.5vw;
+    border: none;
+  }
+
+  .add-input {
+    font-size: 1.5vw;
+    width: 30vw;
+    border-radius: 50px;
+    text-align: center;
+    border: 1px outset #fff;
+    outline-offset: 0.25rem;
+    outline: 0.15rem solid rgb(73, 87, 23);
+    font-weight: 400 !important;
+    background-color: #96cf2c;
+    color: #fff !important;
+    padding: 0.5vw;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-text-fill-color: #fff !important; /* For older versions of Firefox */
+    -moz-appearance: none;
+    cursor: pointer;
+  }
+
+  .header-reservation {
+    font-size: 4vw;
+    color: #fff;
+    letter-spacing: 0.25em;
+    word-spacing: 0.1em;
+    font-weight: 400;
+  }
+
+  .button-reserve {
+    font-size: 1.5vw;
+    width: 15vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.5vw;
+    border: 1px outset #fff;
+    outline-offset: 0.25rem;
+    outline: 0.15rem solid white;
+    margin-top: 5vw;
+  }
+
+  .select-car {
+    font-size: 1vw;
+    width: 10vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.6vw;
+    border: none;
+    text-align: center;
+  }
+
+  input.add-input::placeholder {
+    color: #fff;
+  }
+
+  .react-datepicker-wrapper {
+    width: inherit;
+  }
 }
 
-.wrapper-add-reservation {
-  background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/Luxury-Car-PNG-Image-HD.png");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-}
+@media screen and (min-width: 768px) {
+  .wrapper-reservation {
+    background-image: url("https://www.pngmart.com/files/4/Corvette-Car-Transparent-Background.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
 
-.wrapper-my-reservation {
-  background-image: url("https://image.cnbcfm.com/api/v1/image/102979390-P90196605-highRes.jpg?v=1441738507&w=1600&h=900");
-  background-size: cover;
-  background-position: center;
-  width: 100%;
-}
+  .wrapper-add-reservation {
+    background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/Luxury-Car-PNG-Image-HD.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
 
-.background-tint {
-  background-color: #96cf2c; /* Green tint */
-  background-blend-mode: multiply;
-}
+  .wrapper-my-reservation {
+    background-image: url("https://image.cnbcfm.com/api/v1/image/102979390-P90196605-highRes.jpg?v=1441738507&w=1600&h=900");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
 
-.description {
-  color: #fff !important;
-  font-size: 1vw;
-  text-align: center;
-}
+  .background-tint {
+    background-color: #96cf2c; /* Green tint */
+    background-blend-mode: multiply;
+  }
 
-.header-book {
-  font-size: 2vw;
-  color: #fff;
-  letter-spacing: 0.25em;
-  word-spacing: 0.1em;
-  font-weight: 500;
-}
+  .description {
+    color: #fff !important;
+    font-size: 1vw;
+    text-align: center;
+  }
 
-.horizontal-line {
-  border: 1px solid #fff;
-  width: 80%;
-}
+  .header-book {
+    font-size: 2vw;
+    color: #fff;
+    letter-spacing: 0.25em;
+    word-spacing: 0.1em;
+    font-weight: 500;
+  }
 
-.container {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+  .horizontal-line {
+    border: 1px solid #fff;
+    width: 80%;
+  }
 
-.button {
-  font-size: 1vw;
-  width: 10vw;
-  border-radius: 50px;
-  background-color: white;
-  color: green;
-  padding: 0.5vw;
-  border: none;
-}
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-.button-book-now {
-  font-size: 1.25vw;
-  border-radius: 50px;
-  border: 1px outset #fff;
-  outline-offset: 0.25rem;
-  outline: 0.15rem solid rgb(73, 87, 23);
-  font-weight: 500;
-  background-color: #96cf2c;
-  color: #fff;
-  padding: 0.5vw;
-  width: 15%;
-}
+  .select-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
 
-.button-book-now:hover {
-  background-color: #fff;
-  color: green;
-  transform: scale3d(1.05, 1.05, 1.05);
-  transition: all 0.5s ease-in-out;
-}
+  .button {
+    font-size: 1vw;
+    width: 10vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.5vw;
+    border: none;
+  }
 
-.button-b-form {
-  font-size: 1vw;
-  width: 10vw;
-  border-radius: 50px;
-  background-color: #96cf2c;
-  color: white;
-  font-weight: 400;
-  padding: 0.5vw;
-  border: none;
-}
+  .button-book-now {
+    font-size: 1.25vw;
+    border-radius: 50px;
+    border: 1px outset #fff;
+    outline-offset: 0.25rem;
+    outline: 0.15rem solid rgb(73, 87, 23);
+    font-weight: 500;
+    background-color: #96cf2c;
+    color: #fff;
+    padding: 0.5vw;
+    width: 15%;
+  }
 
-.add-input {
-  font-size: 1.5vw;
-  width: 30vw;
-  border-radius: 50px;
-  text-align: center;
-  border: 1px outset #fff;
-  outline-offset: 0.25rem;
-  outline: 0.15rem solid rgb(73, 87, 23);
-  font-weight: 400 !important;
-  background-color: #96cf2c;
-  color: #fff !important;
-  padding: 0.5vw;
-  appearance: none;
-  -webkit-appearance: none;
-  -webkit-text-fill-color: #fff !important; /* For older versions of Firefox */
-  -moz-appearance: none;
-  cursor: pointer;
-}
+  .button-book-now:hover {
+    background-color: #fff;
+    color: green;
+    transform: scale3d(1.05, 1.05, 1.05);
+    transition: all 0.5s ease-in-out;
+  }
 
-.header-reservation {
-  font-size: 4vw;
-  color: #fff;
-  letter-spacing: 0.25em;
-  word-spacing: 0.1em;
-  font-weight: 400;
-}
+  .button-b-form {
+    font-size: 1vw;
+    width: 10vw;
+    border-radius: 50px;
+    background-color: #96cf2c;
+    color: white;
+    font-weight: 400;
+    padding: 0.5vw;
+    border: none;
+  }
 
-.button-reserve {
-  font-size: 1.5vw;
-  width: 15vw;
-  border-radius: 50px;
-  background-color: white;
-  color: green;
-  padding: 0.5vw;
-  border: 1px outset #fff;
-  outline-offset: 0.25rem;
-  outline: 0.15rem solid white;
-  margin-top: 5vw;
-}
+  .add-input {
+    font-size: 1.5vw;
+    width: 30vw;
+    border-radius: 50px;
+    text-align: center;
+    border: 1px outset #fff;
+    outline-offset: 0.25rem;
+    outline: 0.15rem solid rgb(73, 87, 23);
+    font-weight: 400 !important;
+    background-color: #96cf2c;
+    color: #fff !important;
+    padding: 0.5vw;
+    appearance: none;
+    -webkit-appearance: none;
+    -webkit-text-fill-color: #fff !important; /* For older versions of Firefox */
+    -moz-appearance: none;
+    cursor: pointer;
+  }
 
-.select-car {
-  font-size: 1vw;
-  width: 10vw;
-  border-radius: 50px;
-  background-color: white;
-  color: green;
-  padding: 0.6vw;
-  border: none;
-  text-align: center;
-}
+  .header-reservation {
+    font-size: 4vw;
+    color: #fff;
+    letter-spacing: 0.25em;
+    word-spacing: 0.1em;
+    font-weight: 400;
+  }
 
-input.add-input::placeholder {
-  color: #fff;
-}
+  .button-reserve {
+    font-size: 1.5vw;
+    width: 15vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.5vw;
+    border: 1px outset #fff;
+    outline-offset: 0.25rem;
+    outline: 0.15rem solid white;
+    margin-top: 5vw;
+  }
 
-.react-datepicker-wrapper {
-  width: inherit;
+  .select-car {
+    font-size: 1vw;
+    width: 10vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.6vw;
+    border: none;
+    text-align: center;
+  }
+
+  input.add-input::placeholder {
+    color: #fff;
+  }
+
+  .react-datepicker-wrapper {
+    width: inherit;
+  }
 }

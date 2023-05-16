@@ -70,17 +70,6 @@ const Wrapper = styled.aside`
     color: #96bf01;
   }
 
-  .logout-btn {
-    background: transparent;
-    border-color: transparent;
-    font-size: 1.75rem;
-    color: #121212;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
-  }
-
   .logout-btn:active {
     color: blue;
   }

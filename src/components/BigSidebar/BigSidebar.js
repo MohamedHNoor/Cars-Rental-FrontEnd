@@ -27,7 +27,11 @@ const BigSidebar = () => {
             <img src={Logo} alt="logo" />
           </header>
           <NavLinks />
-          <button type="button" onClick={handleLogout} className=" logout-btn">
+          <button
+            type="button"
+            onClick={handleLogout}
+            className=" ms-3 btn btn-outline-danger px-3 w-50 mt-3"
+          >
             Logout
           </button>
         </div>

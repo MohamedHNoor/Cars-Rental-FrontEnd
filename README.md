@@ -1,4 +1,5 @@
 <a name="readme-top"></a>
+
 <div align="center">
   <h3><b>Cars Rental Frontend</b></h3>
 </div>
@@ -9,7 +10,13 @@
 # 📗 Table of Contents
 
 - [📗 Table of Contents](#-table-of-contents)
-- [📖 Car Rental Frontend ](#-car-rental-frontend-)
+- [📖 Cars Rental Frontend ](#-cars-rental-frontend-)
+  - [Live Demo](#live-demo)
+  - [Desktop View](#desktop-view)
+  - [Mobile View](#mobile-view)
+  - [Kanban Board](#kanban-board)
+  - [Backend](#backend)
+  - [Contributors](#contributors)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
@@ -29,23 +36,55 @@
 
 # 📖 Cars Rental Frontend <a name="about-project"></a>
 
-Car Rentals Frontend is a React app that serves as a front end to the Car Rentals project.
+> Car Rentals Frontend is a React app that serves as a front end to the Car Rentals project.
+
+## Live Demo
+
+To see this project's live demo, please click [here]().
+
+## Desktop View
+
+![screenshot](./src/assets/desktop.png)
+
+## Mobile View
+
+![screenshot](./src/assets/mobile.png)
+
+## Kanban Board
+
+To view the Kanban Board we built for this project please click [here](https://github.com/users/demix007/projects/3).
+
+To view the issue with the Kanban Board screenshots please click [here](https://github.com/demix007/car-rentals-backend/issues/18).
+
+## Backend
+
+Api documentation can be found [here](https://documenter.getpostman.com/view/26901652/2s93eZyBwq)
+
+Api live demo can be found [here](https://cars-api.up.railway.app/)
+
+## Contributors
+
+There were 4 contributors to this project, you can see their contact information in the Authors section of this document.
 
 ## 🛠 Built With <a name="built-with"></a>
+
 This app is build with React and Redux.
+
 ### Tech Stack <a name="tech-stack"></a>
+
 > <li><a href="https://reactjs.org/">React</a></li>
 > <li><a href="https://redux.js.org/">Redux</a></li>
 
 ### Key Features <a name="key-features"></a>
 
 > - The login page where the user logs in to the website.
-> - The home page where the user can see a list of cars and click on any car to display the details of that car. 
+> - The home page where the user can see a list of cars and click on any car to display the details of that car.
 > - The details page is where the user can click on the "Reserve" button to reserve the car.
 > - The user can see a list of their reservations.
 > - The user can add a new car.
 > - The user can click on the delete button from the naviagtion panel and see a list of all cars with the car name and a "delete" button and then delete a particular car.
 > - The deleted cars are removed from the home page.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
@@ -77,6 +116,7 @@ In order to run this project you need:
  cd Cars-Rental-FrontEnd
 
 ```
+
 ### Install
 
 - Install this project with:
@@ -153,6 +193,7 @@ If you like this project, please leave a ⭐️
 <!-- ACKNOWLEDGEMENTS -->
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
+
 - We would like to thank Microverse for providing the reading materials that aided us to during the project development.
 - We would like to give Credit to 🙏 Murat Korkmaz the author of the original Vespa- Responsive Redesign, as required by the Creative Commons License.
 

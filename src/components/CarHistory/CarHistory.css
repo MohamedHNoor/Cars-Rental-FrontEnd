@@ -5,7 +5,7 @@
   justify-content: center;
   gap: 2rem;
   flex-wrap: wrap;
-  padding-top: 30px;
+  padding-top: 60px;
 }
 
 .history-card {
@@ -25,6 +25,7 @@
   width: 10rem;
   height: 100%;
   font-size: 1rem;
+  padding: 1rem;
 }
 
 .card-body {
@@ -43,7 +44,7 @@
   }
 
   .history-card {
-    height: 30%;
+    height: 45%;
   }
 
   .card-title {

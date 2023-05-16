@@ -3,7 +3,7 @@ import CarHistory from '../components/CarHistory/CarHistory';
 import SmallSidebar from '../components/SmallSidebar/SmallSidebar';
 import BigSidebar from '../components/BigSidebar/BigSidebar';
 
-function Reservationshistory(props) {
+const Reservationshistory = (props) => {
   return (
     <div className="sliderwrapper">
       <SmallSidebar />
@@ -11,6 +11,6 @@ function Reservationshistory(props) {
       <CarHistory />
     </div>
   );
-}
+};
 
 export default Reservationshistory;

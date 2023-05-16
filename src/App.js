@@ -1,22 +1,22 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { useEffect } from "react";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Homepage from "./pages/homepage";
-import CarHistory from "./components/CarHistory/CarHistory";
-import Reservationpage from "./pages/reservationpage";
-import Detailspage from "./pages/detailspage";
-import Reservations from "./components/Reservations/Reservations";
-import MyReservations from "./components/Reservations/MyReservations";
-import "./App.css";
-import Reservationshistory from "./pages/reservationshistory";
-import LoginPage from "./pages/LoginPage";
-import Error from "./pages/Error";
-import ProtectedRoute from "./pages/ProtectedRoute";
-import { fetchCars } from "./redux/slices/carSlice";
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Homepage from './pages/homepage';
+import CarHistory from './components/CarHistory/CarHistory';
+import Reservationpage from './pages/reservationpage';
+import Detailspage from './pages/detailspage';
+import Reservations from './components/Reservations/Reservations';
+import MyReservations from './components/Reservations/MyReservations';
+import './App.css';
+import Reservationshistory from './pages/reservationshistory';
+import LoginPage from './pages/LoginPage';
+import Error from './pages/Error';
+import ProtectedRoute from './pages/ProtectedRoute';
+import { fetchCars } from './redux/slices/carSlice';
 
-function App() {
+const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCars());
@@ -66,7 +66,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-      
+
           <Route
             path="/myreservations"
             element={
@@ -82,6 +82,6 @@ function App() {
       </BrowserRouter>
     </div>
   );
-}
+};
 
 export default App;

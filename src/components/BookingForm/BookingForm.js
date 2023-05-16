@@ -1,47 +1,47 @@
-import React, { useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { createNewCar } from "../../redux/slices/carSlice";
-import { fetchCars } from "../../redux/slices/carSlice";
+import React, { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { createNewCar } from '../../redux/slices/carSlice';
+import { fetchCars } from '../../redux/slices/carSlice';
 
-function BookingForm(props) {
+const BookingForm = (props) => {
   const dispatch = useDispatch();
   const { cars } = useSelector((state) => state.cars);
   const [carData, setCarData] = useState({
-    name: "",
-    description: "",
-    photo: "",
-    price: "",
-    model: "",
+    name: '',
+    description: '',
+    photo: '',
+    price: '',
+    model: '',
   });
-  const [successMessage, setSuccessMessage] = useState("");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [successMessage, setSuccessMessage] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
   const handleCreateNewCar = async (e) => {
     e.preventDefault();
     // Check if any field is empty
     const isAnyFieldEmpty = Object.values(carData).some(
-      (value) => value === ""
+      (value) => value === '',
     );
     if (isAnyFieldEmpty) {
       // Display error message to fill out the empty field
-      setErrorMessage("Please fill out all fields");
+      setErrorMessage('Please fill out all fields');
       setTimeout(() => {
-        setErrorMessage("");
+        setErrorMessage('');
       }, 3000);
       return;
     }
     await dispatch(createNewCar(carData));
     dispatch(fetchCars()); // Fetch cars after new car creation
     setCarData({
-      name: "",
-      description: "",
-      photo: "",
-      price: "",
-      model: "",
+      name: '',
+      description: '',
+      photo: '',
+      price: '',
+      model: '',
     });
-    setSuccessMessage("Car created successfully");
+    setSuccessMessage('Car created successfully');
     // Clear success message after a delay (e.g., 3 seconds)
     setTimeout(() => {
-      setSuccessMessage("");
+      setSuccessMessage('');
     }, 3000);
   };
   const handleInputChange = (e) => {
@@ -50,7 +50,7 @@ function BookingForm(props) {
       [e.target.name]: e.target.value,
     });
   };
-  
+
   return (
     <div className="w-50 container-b-form container">
       <form onSubmit={handleCreateNewCar}>
@@ -118,6 +118,6 @@ function BookingForm(props) {
       )}
     </div>
   );
-}
+};
 
 export default BookingForm;

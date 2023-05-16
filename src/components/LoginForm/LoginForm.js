@@ -13,7 +13,7 @@ const initialState = {
   isMember: true,
 };
 
-function LoginForm(props) {
+const LoginForm = (props) => {
   const [values, setValues] = useState(initialState);
   const dispatch = useDispatch();
   const { isLoading, user } = useSelector((store) => store.user);
@@ -93,6 +93,6 @@ function LoginForm(props) {
       </form>
     </Wrapper>
   );
-}
+};
 
 export default LoginForm;

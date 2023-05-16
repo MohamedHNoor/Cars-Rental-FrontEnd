@@ -3,7 +3,7 @@ import BookingForm from '../components/BookingForm/BookingForm';
 import SmallSidebar from '../components/SmallSidebar/SmallSidebar';
 import BigSidebar from '../components/BigSidebar/BigSidebar';
 
-function Reservationpage(props) {
+const Reservationpage = (props) => {
   return (
     <div className="sliderwrapper">
       <SmallSidebar />
@@ -11,6 +11,6 @@ function Reservationpage(props) {
       <BookingForm />
     </div>
   );
-}
+};
 
 export default Reservationpage;

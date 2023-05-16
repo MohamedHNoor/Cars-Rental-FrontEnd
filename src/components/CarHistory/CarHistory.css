@@ -29,11 +29,12 @@
 
 .card-body {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: center;
   width: 100%;
   min-width: 240px;
-  gap: 20px;
+  gap: 10px;
 }
 
 @media (max-width: 500px) {

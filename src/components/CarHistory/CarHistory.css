@@ -41,10 +41,9 @@
     font-size: 12px;
   }
 
-.history-card {
-  height: 30%;
-
-}
+  .history-card {
+    height: 30%;
+  }
 
   .card-title {
     font-size: 12px;

@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-const axios = require('axios');
+import axios from "axios";
 import { getUserFromLocalStorage } from "../../utils/LocalStorage";
 
 export const BASE_URL = "https://cars-api.up.railway.app/api/v1";

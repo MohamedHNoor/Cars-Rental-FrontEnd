@@ -14,8 +14,21 @@ function BookingForm(props) {
     model: "",
   });
   const [successMessage, setSuccessMessage] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const handleCreateNewCar = async (e) => {
     e.preventDefault();
+    // Check if any field is empty
+    const isAnyFieldEmpty = Object.values(carData).some(
+      (value) => value === ""
+    );
+    if (isAnyFieldEmpty) {
+      // Display error message to fill out the empty field
+      setErrorMessage("Please fill out all fields");
+      setTimeout(() => {
+        setErrorMessage("");
+      }, 3000);
+      return;
+    }
     await dispatch(createNewCar(carData));
     dispatch(fetchCars()); // Fetch cars after new car creation
     setCarData({
@@ -37,9 +50,9 @@ function BookingForm(props) {
       [e.target.name]: e.target.value,
     });
   };
-
+  
   return (
-    <div className="w-50 container">
+    <div className="w-50 container-b-form container">
       <form onSubmit={handleCreateNewCar}>
         <div className="d-flex flex-column justify-content-center align-items-center">
           <label className="mb-4 h5 d-flex flex-column">
@@ -95,7 +108,14 @@ function BookingForm(props) {
           <input className="mt-4 button-b-form" type="submit" value="Submit" />
         </div>
       </form>
-      {successMessage && <p>{successMessage}</p>}
+      {successMessage && (
+        <p className="mt-2 alert alert-success text-center">{successMessage}</p>
+      )}
+      {errorMessage && (
+        <p className="mt-2 alert alert-danger text-center">
+          Please fill out all fields
+        </p>
+      )}
     </div>
   );
 }

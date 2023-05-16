@@ -1,4 +1,4 @@
-const axios = require('axios');
+import axios from "axios";
 
 const customFetch = axios.create({
 	baseURL: 'https://cars-api.up.railway.app',

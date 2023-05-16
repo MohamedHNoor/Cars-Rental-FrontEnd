@@ -17,8 +17,6 @@ function Reservations(props) {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search);
   const initialCarId = searchParams.get("carId");
-
-  console.log("Cars fetched: ", cars);
   const pickUpDate = new Date(2023, 5, 13); // Month is 0-based (0: January, 1: February, etc.)
   const returnDate = new Date(2023, 5, 29); // Month is 0-based (0: January, 1: February, etc.)
   const [reservationData, setReservationData] = useState({
@@ -46,12 +44,10 @@ function Reservations(props) {
     const selectedCar = cars.find(
       (car) => car.id === parseInt(reservationData.car_id)
     );
-    console.log("selected car: ", selectedCar);
-    console.log("reservationData: ", reservationData.car_id);
+
     if (selectedCar) {
       // Update the car_id with the actual car_id value
       const carId = selectedCar.id;
-      console.log("carID: ", carId);
       const updatedReservationData = {
         ...reservationData,
         car_id: carId,
@@ -100,15 +96,6 @@ function Reservations(props) {
 
             <h1 className="header-book">BOOK A CAR RIDE</h1>
             <hr className="horizontal-line" />
-            <p className="description">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat
-              vitae expedita, eaque nisi laudantium aliquam sapiente excepturi
-              dolorem fugiat ipsum reiciendis ex mollitia reprehenderit ipsa
-              fugit tempore iusto blanditiis ratione accusamus esse cupiditate?
-              Expedita optio corporis quaerat doloribus facere possimus cum
-              veniam nihil officia, impedit quibusdam perferendis laudantium
-              sequi odio?
-            </p>
             <div className="d-flex flex-column gap-2 justify-content-center align-items-baseline">
               <DateRange
                 selectedStartDate={selectedStartDate}
@@ -116,7 +103,7 @@ function Reservations(props) {
                 onStartDateChange={setSelectedStartDate}
                 onEndDateChange={setSelectedEndDate}
               />
-              <div className="d-flex flex-md-wrap gap-4">
+              <div className="select-container">
                 <select
                   className="select-car mb-4"
                   value={reservationData.car_id || initialCarId}
@@ -155,7 +142,7 @@ function Reservations(props) {
             <button
               type="button"
               onClick={handleBookNow}
-              className="button-book-now w-50 mt-4"
+              className="button-book-now mt-4"
             >
               Book Now
             </button>

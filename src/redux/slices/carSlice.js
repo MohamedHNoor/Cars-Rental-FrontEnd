@@ -33,7 +33,6 @@ export const deleteCar = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const token = getUserFromLocalStorage();
-      console.log("token: ", token);
       const response = await axios.delete(`${BASE_URL}/cars/${id}`, {
         headers: {
           Authorization: `Bearer ${token.token}`,
@@ -51,7 +50,6 @@ export const createNewCar = createAsyncThunk(
   async (carData, { rejectWithValue }) => {
     try {
       const token = getUserFromLocalStorage();
-      console.log("token: ", token);
       const response = await axios.post(`${BASE_URL}/cars`, carData, {
         headers: {
           Authorization: `Bearer ${token.token}`,
@@ -69,7 +67,6 @@ export const createReservation = createAsyncThunk(
   async (reservationData, { rejectWithValue }) => {
     try {
       const token = getUserFromLocalStorage();
-      console.log("token: ", token);
       const response = await axios.post(
         `${BASE_URL}/reservations`,
         reservationData,
@@ -79,10 +76,9 @@ export const createReservation = createAsyncThunk(
           },
         }
       );
-      console.log(response.data);
+
       return response.data;
     } catch (err) {
-      console.error(err);
       return rejectWithValue(await err.response.data);
     }
   }
@@ -93,7 +89,6 @@ export const fetchReservations = createAsyncThunk(
   async (_, { rejectWithValue }) => {
     try {
       const token = getUserFromLocalStorage();
-      console.log("token: ", token);
       const response = await axios.get(`${BASE_URL}/reservations`, {
         headers: {
           Authorization: `Bearer ${token.token}`,
@@ -111,7 +106,6 @@ export const deleteReservation = createAsyncThunk(
   async (id, { rejectWithValue }) => {
     try {
       const token = getUserFromLocalStorage();
-      console.log("token: ", token);
       const response = await axios.delete(`${BASE_URL}/reservations/${id}`, {
         headers: {
           Authorization: `Bearer ${token.token}`,

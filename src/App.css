@@ -67,11 +67,18 @@
   border: 1px outset #fff;
   outline-offset: 0.25rem;
   outline: 0.15rem solid rgb(73, 87, 23);
-  font-weight: 700 !important;
+  font-weight: 500;
   background-color: #96cf2c;
-  color: #fff !important;
-  color: white;
+  color: #fff;
   padding: 0.5vw;
+  width: 15%;
+}
+
+.button-book-now:hover {
+  background-color: #fff;
+  color: green;
+  transform: scale3d(1.05, 1.05, 1.05);
+  transition: all 0.5s ease-in-out;
 }
 
 .button-b-form {

@@ -76,12 +76,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 70%;
 }
 
 .car-description {
   color: thistle;
   width: 25rem;
-  font-size: smaller;
+  font-size: 16px;
 }
 
 span {
@@ -98,10 +99,21 @@ span {
   align-items: center;
 }
 
+@media (max-width: 500px) {
+  .slide-container {
+    background-color: transparent;
+    height: 20rem;
+  }
+
+  .car {
+    width: 80% !important;
+  }
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   height: 100%;
   gap: 1rem;
 }

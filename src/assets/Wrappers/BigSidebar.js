@@ -57,6 +57,15 @@ const Wrapper = styled.aside`
       margin: 0 auto;
       cursor: pointer;
       padding-left: 1rem;
+      text-align: center;
+      padding-bottom: 10px;
+    }
+
+    .socials {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
     }
   }
 `;

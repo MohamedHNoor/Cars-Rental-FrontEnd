@@ -31,10 +31,8 @@ export const registerUser = createAsyncThunk(
 					},
 				},
 			);
-			console.log(resp.data);
 			return resp.data;
 		} catch (error) {
-			console.log(error.response.data);
 			return thunkAPI.rejectWithValue(error.response.data);
 		}
 	},
@@ -57,10 +55,8 @@ export const loginUser = createAsyncThunk(
 					},
 				},
 			);
-			console.log(resp.data);
 			return resp.data;
 		} catch (error) {
-			console.log(error.response.data);
 			return thunkAPI.rejectWithValue(error.response.data);
 		}
 	},

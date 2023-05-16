@@ -10,7 +10,7 @@ exports[`Components testing home component 1`] = `
         data-testid="homepage"
       >
         <aside
-          class="sc-eLqIir fmgIuS"
+          class="sc-eLqIir OFajL"
         >
           <button
             class="toggle-btn"
@@ -96,7 +96,7 @@ exports[`Components testing home component 1`] = `
                 </a>
               </div>
               <button
-                class="logout-btn btn"
+                class="btn btn-outline-danger px-3 w-50 mt-3"
                 type="button"
               >
                 Logout
@@ -105,7 +105,7 @@ exports[`Components testing home component 1`] = `
           </div>
         </aside>
         <aside
-          class="sc-HzRMQ kkRGXF"
+          class="sc-HzRMQ csqDgg"
         >
           <div
             class="show-sidebar"
@@ -155,7 +155,7 @@ exports[`Components testing home component 1`] = `
                 </a>
               </div>
               <button
-                class=" logout-btn"
+                class=" ms-3 btn btn-outline-danger px-3 w-50 mt-3"
                 type="button"
               >
                 Logout
@@ -311,7 +311,7 @@ exports[`Components testing home component 1`] = `
       data-testid="homepage"
     >
       <aside
-        class="sc-eLqIir fmgIuS"
+        class="sc-eLqIir OFajL"
       >
         <button
           class="toggle-btn"
@@ -397,7 +397,7 @@ exports[`Components testing home component 1`] = `
               </a>
             </div>
             <button
-              class="logout-btn btn"
+              class="btn btn-outline-danger px-3 w-50 mt-3"
               type="button"
             >
               Logout
@@ -406,7 +406,7 @@ exports[`Components testing home component 1`] = `
         </div>
       </aside>
       <aside
-        class="sc-HzRMQ kkRGXF"
+        class="sc-HzRMQ csqDgg"
       >
         <div
           class="show-sidebar"
@@ -456,7 +456,7 @@ exports[`Components testing home component 1`] = `
               </a>
             </div>
             <button
-              class=" logout-btn"
+              class=" ms-3 btn btn-outline-danger px-3 w-50 mt-3"
               type="button"
             >
               Logout

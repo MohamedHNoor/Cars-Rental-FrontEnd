@@ -10,7 +10,7 @@
 
 .history-card {
   width: fit-content;
-  height: 25%;
+  height: 45%;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
   background-color: rgb(230, 251, 251);
   padding-top: 20px;
@@ -18,7 +18,7 @@
 
 .history-card > img {
   width: 15rem;
-  height: 6rem;
+  height: 9rem;
 }
 
 .history-card > div {
@@ -30,7 +30,7 @@
 .card-body {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   width: 100%;
   min-width: 240px;
   gap: 20px;
@@ -40,6 +40,11 @@
   .card-body {
     font-size: 12px;
   }
+
+.history-card {
+  height: 30%;
+
+}
 
   .card-title {
     font-size: 12px;

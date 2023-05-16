@@ -1,6 +1,8 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import './Slider.css'
+import "swiper/css";
+import "swiper/css/navigation";
 import { Navigation } from "swiper";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { TiSocialTwitterCircular, TiSocialPinterestCircular, TiSocialFacebookCircular } from "react-icons/ti";

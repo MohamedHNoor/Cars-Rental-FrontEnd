@@ -76,7 +76,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-height: 70%;
+  height: 70%;
 }
 
 .car-description {
@@ -100,14 +100,14 @@ span {
 }
 
 @media (max-width: 500px) {
-    .slide-container  {
-  background-color: transparent;
-  height: 20rem;
-}
+  .slide-container {
+    background-color: transparent;
+    height: 20rem;
+  }
 
-.car {
-width: 80%!important;
-}
+  .car {
+    width: 80% !important;
+  }
 }
 
 .wrapper {

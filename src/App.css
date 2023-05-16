@@ -53,6 +53,10 @@
     align-items: center;
   }
 
+  .container-b-form {
+    padding: 2vw;
+  }
+
   .button {
     font-size: 1vw;
     width: 10vw;
@@ -84,8 +88,8 @@
   }
 
   .button-b-form {
-    font-size: 1vw;
-    width: 10vw;
+    font-size: 5vw;
+    width: 25vw;
     border-radius: 50px;
     background-color: #96cf2c;
     color: white;
@@ -95,22 +99,14 @@
   }
 
   .add-input {
-    font-size: 1.5vw;
-    width: 30vw;
+    font-size: 4vw;
+    width: 50vw;
     border-radius: 50px;
+    border: 1px solid gray;
+    box-shadow: inset 0 0 0 0.1rem #fff;
+    background-color: white;
+    padding: 1vw;
     text-align: center;
-    border: 1px outset #fff;
-    outline-offset: 0.25rem;
-    outline: 0.15rem solid rgb(73, 87, 23);
-    font-weight: 400 !important;
-    background-color: #96cf2c;
-    color: #fff !important;
-    padding: 0.5vw;
-    appearance: none;
-    -webkit-appearance: none;
-    -webkit-text-fill-color: #fff !important; /* For older versions of Firefox */
-    -moz-appearance: none;
-    cursor: pointer;
   }
 
   .header-reservation {
@@ -245,8 +241,8 @@
   }
 
   .button-b-form {
-    font-size: 1vw;
-    width: 10vw;
+    font-size: 2vw;
+    width: 12vw;
     border-radius: 50px;
     background-color: #96cf2c;
     color: white;
@@ -255,23 +251,19 @@
     border: none;
   }
 
+  .container-b-form {
+    padding: 2vw;
+  }
+
   .add-input {
-    font-size: 1.5vw;
-    width: 30vw;
+    font-size: 2vw;
+    width: 35vw;
     border-radius: 50px;
+    border: 1px solid gray;
+    box-shadow: inset 0 0 0 0.1rem #fff;
+    background-color: white;
+    padding: 1vw;
     text-align: center;
-    border: 1px outset #fff;
-    outline-offset: 0.25rem;
-    outline: 0.15rem solid rgb(73, 87, 23);
-    font-weight: 400 !important;
-    background-color: #96cf2c;
-    color: #fff !important;
-    padding: 0.5vw;
-    appearance: none;
-    -webkit-appearance: none;
-    -webkit-text-fill-color: #fff !important; /* For older versions of Firefox */
-    -moz-appearance: none;
-    cursor: pointer;
   }
 
   .header-reservation {

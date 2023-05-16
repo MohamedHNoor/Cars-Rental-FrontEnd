@@ -29,7 +29,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "CI= react-scripts build",
+    "local-build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
     "fix": "npx stylelint \"**/*.{css,scss}\" --fix && npx eslint . --fix",

@@ -1,0 +1,173 @@
+.sliderwrapper {
+  display: flex;
+  height: 100vh;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebarWrapper {
+  flex-shrink: 0;
+}
+
+.sliderWrapper {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+.swiper-wrapper,
+.swiper {
+  width: 100% !important;
+}
+
+.swiper {
+  position: relative;
+}
+
+.swiper-prev,
+.swiper-next {
+  z-index: 10;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  background-color: #97bf0f;
+}
+
+.slider-btns {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+}
+
+.swiper-prev {
+  /* left: calc(-30px - 1.5em); */
+  border-top-right-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+  width: 3rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.swiper-next {
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  width: 3rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.swiper-slide {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+}
+
+.car-description {
+  color: thistle;
+  width: 25rem;
+  font-size: 16px;
+}
+
+span {
+  color: thistle;
+}
+
+.slide-container {
+  background-color: #ededed;
+  border-radius: 50%;
+  width: fit-content;
+  height: 23rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  .slide-container {
+    background-color: transparent;
+    height: 20rem;
+  }
+
+  .car {
+    width: 80% !important;
+  }
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 100%;
+  gap: 1rem;
+}
+
+.slide-socials {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.car {
+  width: 25rem;
+}
+
+.slider-title {
+  margin-bottom: 2rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.car-title {
+  color: black;
+  width: fit-content;
+}
+
+.car-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 1025px) {
+  .sliderwrapper {
+    text-align: center;
+  }
+
+  .responsive-slider {
+    height: 100% !important;
+    width: 100% !important;
+  }
+
+  .swiper-wrapper,
+  .swiper {
+    width: 100% !important;
+    height: 100% !important;
+  }
+
+  .swiper-slide {
+    width: 100%;
+  }
+}

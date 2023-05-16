@@ -1,0 +1,53 @@
+.cards-grid {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding-top: 60px;
+}
+
+.history-card {
+  width: fit-content;
+  height: 45%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+  background-color: rgb(230, 251, 251);
+  padding-top: 20px;
+}
+
+.history-card > img {
+  width: 15rem;
+  height: 9rem;
+}
+
+.history-card > div {
+  width: 10rem;
+  height: 100%;
+  font-size: 1rem;
+  padding: 1rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  min-width: 240px;
+  gap: 10px;
+}
+
+@media (max-width: 500px) {
+  .card-body {
+    font-size: 12px;
+  }
+
+  .history-card {
+    height: 45%;
+  }
+
+  .card-title {
+    font-size: 12px;
+  }
+}

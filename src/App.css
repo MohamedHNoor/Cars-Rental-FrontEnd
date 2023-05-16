@@ -1,38 +1,308 @@
-.App {
-  text-align: center;
-}
+@media screen and (max-width: 767px) {
+  .wrapper-reservation {
+    background-image: url("https://www.pngmart.com/files/4/Corvette-Car-Transparent-Background.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  .wrapper-add-reservation {
+    background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/Luxury-Car-PNG-Image-HD.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  .wrapper-my-reservation {
+    background-image: url("https://image.cnbcfm.com/api/v1/image/102979390-P90196605-highRes.jpg?v=1441738507&w=1600&h=900");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  .background-tint {
+    background-color: #96cf2c; /* Green tint */
+    background-blend-mode: multiply;
+  }
+
+  .select-container {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .header-book {
+    font-size: 6vw;
+    color: #fff;
+    letter-spacing: 0.25em;
+    word-spacing: 0.1em;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .horizontal-line {
+    border: 1px solid #fff;
+    width: 100%;
+  }
+
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .container-b-form {
+    padding: 2vw;
+  }
+
+  .button {
+    font-size: 1vw;
+    width: 10vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.5vw;
+    border: none;
+  }
+
+  .button-book-now {
+    font-size: 4.5vw;
+    border-radius: 50px;
+    border: 1px outset #fff;
+    outline-offset: 0.25rem;
+    outline: 0.15rem solid rgb(73, 87, 23);
+    font-weight: 500;
+    background-color: #96cf2c;
+    color: #fff;
+    padding: 0.5vw;
+    width: 60%;
+  }
+
+  .button-book-now:hover {
+    background-color: #fff;
+    color: green;
+    transform: scale3d(1.05, 1.05, 1.05);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .button-b-form {
+    font-size: 5vw;
+    width: 25vw;
+    border-radius: 50px;
+    background-color: #96cf2c;
+    color: white;
+    font-weight: 400;
+    padding: 0.5vw;
+    border: none;
+  }
+
+  .add-input {
+    font-size: 4vw;
+    width: 50vw;
+    border-radius: 50px;
+    border: 1px solid gray;
+    box-shadow: inset 0 0 0 0.1rem #fff;
+    background-color: white;
+    padding: 1vw;
+    text-align: center;
+  }
+
+  .header-reservation {
+    font-size: 4vw;
+    color: #fff;
+    letter-spacing: 0.25em;
+    word-spacing: 0.1em;
+    font-weight: 400;
+  }
+
+  .button-reserve {
+    font-size: 1.5vw;
+    width: 15vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.5vw;
+    border: 1px outset #fff;
+    outline-offset: 0.25rem;
+    outline: 0.15rem solid white;
+    margin-top: 5vw;
+  }
+
+  .select-car {
+    font-size: 4vw;
+    width: 30vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.6vw;
+    border: none;
+    text-align: center;
+  }
+
+  input.add-input::placeholder {
+    color: #fff;
+  }
+
+  .react-datepicker-wrapper {
+    width: inherit;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 768px) {
+  .wrapper-reservation {
+    background-image: url("https://www.pngmart.com/files/4/Corvette-Car-Transparent-Background.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
   }
-  to {
-    transform: rotate(360deg);
+
+  .wrapper-add-reservation {
+    background-image: url("https://www.pngall.com/wp-content/uploads/2018/04/Luxury-Car-PNG-Image-HD.png");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  .wrapper-my-reservation {
+    background-image: url("https://image.cnbcfm.com/api/v1/image/102979390-P90196605-highRes.jpg?v=1441738507&w=1600&h=900");
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+  }
+
+  .background-tint {
+    background-color: #96cf2c; /* Green tint */
+    background-blend-mode: multiply;
+  }
+
+  .description {
+    color: #fff !important;
+    font-size: 1vw;
+    text-align: center;
+  }
+
+  .header-book {
+    font-size: 2vw;
+    color: #fff;
+    letter-spacing: 0.25em;
+    word-spacing: 0.1em;
+    font-weight: 500;
+  }
+
+  .horizontal-line {
+    border: 1px solid #fff;
+    width: 80%;
+  }
+
+  .container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .select-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .button {
+    font-size: 1vw;
+    width: 10vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.5vw;
+    border: none;
+  }
+
+  .button-book-now {
+    font-size: 1.25vw;
+    border-radius: 50px;
+    border: 1px outset #fff;
+    outline-offset: 0.25rem;
+    outline: 0.15rem solid rgb(73, 87, 23);
+    font-weight: 500;
+    background-color: #96cf2c;
+    color: #fff;
+    padding: 0.5vw;
+    width: 25%;
+  }
+
+  .button-book-now:hover {
+    background-color: #fff;
+    color: green;
+    transform: scale3d(1.05, 1.05, 1.05);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .button-b-form {
+    font-size: 2vw;
+    width: 12vw;
+    border-radius: 50px;
+    background-color: #96cf2c;
+    color: white;
+    font-weight: 400;
+    padding: 0.5vw;
+    border: none;
+  }
+
+  .container-b-form {
+    padding: 2vw;
+  }
+
+  .add-input {
+    font-size: 2vw;
+    width: 35vw;
+    border-radius: 50px;
+    border: 1px solid gray;
+    box-shadow: inset 0 0 0 0.1rem #fff;
+    background-color: white;
+    padding: 1vw;
+    text-align: center;
+  }
+
+  .header-reservation {
+    font-size: 4vw;
+    color: #fff;
+    letter-spacing: 0.25em;
+    word-spacing: 0.1em;
+    font-weight: 400;
+  }
+
+  .button-reserve {
+    font-size: 1.5vw;
+    width: 15vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.5vw;
+    border: 1px outset #fff;
+    outline-offset: 0.25rem;
+    outline: 0.15rem solid white;
+    margin-top: 5vw;
+  }
+
+  .select-car {
+    font-size: 1vw;
+    width: 10vw;
+    border-radius: 50px;
+    background-color: white;
+    color: green;
+    padding: 0.6vw;
+    border: none;
+    text-align: center;
+  }
+
+  input.add-input::placeholder {
+    color: #fff;
+  }
+
+  .react-datepicker-wrapper {
+    width: inherit;
   }
 }

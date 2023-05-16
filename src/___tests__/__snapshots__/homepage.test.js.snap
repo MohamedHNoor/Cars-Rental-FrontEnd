@@ -1,0 +1,660 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Components testing home component 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="sliderwrapper"
+        data-testid="homepage"
+      >
+        <aside
+          class="sc-eLqIir OFajL"
+        >
+          <button
+            class="toggle-btn"
+            type="button"
+          >
+            <svg
+              fill="currentColor"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 1024 1024"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+              />
+            </svg>
+          </button>
+          <div
+            class="sidebar-container "
+          >
+            <div
+              class="content"
+            >
+              <button
+                class="close-btn"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 352 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                  />
+                </svg>
+              </button>
+              <header>
+                <img
+                  alt="logo"
+                  class="logo"
+                  src=""
+                />
+              </header>
+              <div
+                class="nav-links"
+              >
+                <a
+                  aria-current="page"
+                  class="nav-link active"
+                  href="/"
+                >
+                  Models
+                </a>
+                <a
+                  class="nav-link"
+                  href="/bookride"
+                >
+                  BOOK RIDE
+                </a>
+                <a
+                  class="nav-link"
+                  href="/addItem"
+                >
+                  ADD CAR
+                </a>
+                <a
+                  class="nav-link"
+                  href="/deleteItem"
+                >
+                  DELETE CAR
+                </a>
+                <a
+                  class="nav-link"
+                  href="/myreservations"
+                >
+                  RESERVATIONS
+                </a>
+              </div>
+              <button
+                class="btn btn-outline-danger px-3 w-50 mt-3"
+                type="button"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+        </aside>
+        <aside
+          class="sc-HzRMQ csqDgg"
+        >
+          <div
+            class="show-sidebar"
+          >
+            <div
+              class="content"
+            >
+              <header>
+                <img
+                  alt="logo"
+                  src=""
+                />
+              </header>
+              <div
+                class="nav-links"
+              >
+                <a
+                  aria-current="page"
+                  class="nav-link active"
+                  href="/"
+                >
+                  Models
+                </a>
+                <a
+                  class="nav-link"
+                  href="/bookride"
+                >
+                  BOOK RIDE
+                </a>
+                <a
+                  class="nav-link"
+                  href="/addItem"
+                >
+                  ADD CAR
+                </a>
+                <a
+                  class="nav-link"
+                  href="/deleteItem"
+                >
+                  DELETE CAR
+                </a>
+                <a
+                  class="nav-link"
+                  href="/myreservations"
+                >
+                  RESERVATIONS
+                </a>
+              </div>
+              <button
+                class=" ms-3 btn btn-outline-danger px-3 w-50 mt-3"
+                type="button"
+              >
+                Logout
+              </button>
+            </div>
+          </div>
+          <div
+            class="footer"
+          >
+            <div
+              class="socials"
+            >
+              <svg
+                fill="black"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+                />
+              </svg>
+              <svg
+                fill="black"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z"
+                />
+              </svg>
+              <svg
+                fill="black"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                version="1.1"
+                viewBox="0 0 17 17"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g />
+                <path
+                  d="M17 2.615v1.308h-2.615v2.616h-1.308v-2.616h-2.615v-1.308h2.615v-2.615h1.308v2.615h2.615zM10.39 12.78c0 1.175-0.561 2.125-1.43 2.881-1.175 1.012-2.779 1.339-4.291 1.339-1.91 0-4.669-0.817-4.669-3.187 0-0.48 0.164-0.951 0.379-1.38 0.908-1.838 3.748-2.309 5.577-2.36-0.336-0.439-0.653-0.949-0.653-1.522 0-0.337 0.121-0.562 0.225-0.878-0.246 0.030-0.48 0.051-0.715 0.051-1.982 0-3.698-1.461-3.698-3.515 0-1.941 1.501-3.596 3.36-4.004 0.624-0.134 1.266-0.205 1.91-0.205h4.466l-1.379 0.807h-1.381c1.013 0.633 1.523 1.87 1.523 3.014 0 2.707-2.289 2.911-2.289 4.26 0 1.318 3.065 1.839 3.065 4.699zM7.725 4.853c0-1.553-0.839-4.117-2.729-4.117-1.337 0-1.991 1.185-1.991 2.391 0 1.552 1.021 3.984 2.84 3.984 1.398-0.001 1.88-1.012 1.88-2.258zM8.95 13.659c0-1.43-1.34-2.227-2.381-2.953-0.174-0.020-0.338-0.020-0.512-0.020-1.674 0-4.168 0.531-4.168 2.656 0 1.961 2.207 2.718 3.842 2.718 1.522 0 3.219-0.613 3.219-2.401z"
+                />
+              </svg>
+              <svg
+                fill="black"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 384 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"
+                />
+              </svg>
+            </div>
+            <div
+              class="text-black"
+            >
+              @2023 WHEELSAWAY
+            </div>
+          </div>
+        </aside>
+        <div
+          class="sliderWrapper"
+        >
+          <div
+            style="width: 100%; position: relative;"
+          >
+            <div
+              class="slider-title text-center"
+            >
+              <h2
+                class="text-center"
+              >
+                Latest Models
+              </h2>
+              <span>
+                Please select a model
+              </span>
+            </div>
+            <div
+              class="slider-btns"
+            >
+              <div
+                class="swiper-prev"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="swiper-next"
+              >
+                <svg
+                  fill="currentColor"
+                  height="1em"
+                  stroke="currentColor"
+                  stroke-width="0"
+                  viewBox="0 0 512 512"
+                  width="1em"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="responsive-slider"
+              style="width: 90%; position: relative;"
+            >
+              <div
+                class="swiper swiper-initialized swiper-horizontal"
+              >
+                <div
+                  class="swiper-wrapper"
+                  style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="sliderwrapper"
+      data-testid="homepage"
+    >
+      <aside
+        class="sc-eLqIir OFajL"
+      >
+        <button
+          class="toggle-btn"
+          type="button"
+        >
+          <svg
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            stroke-width="0"
+            viewBox="0 0 1024 1024"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M904 160H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0 624H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8zm0-312H120c-4.4 0-8 3.6-8 8v64c0 4.4 3.6 8 8 8h784c4.4 0 8-3.6 8-8v-64c0-4.4-3.6-8-8-8z"
+            />
+          </svg>
+        </button>
+        <div
+          class="sidebar-container "
+        >
+          <div
+            class="content"
+          >
+            <button
+              class="close-btn"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 352 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"
+                />
+              </svg>
+            </button>
+            <header>
+              <img
+                alt="logo"
+                class="logo"
+                src=""
+              />
+            </header>
+            <div
+              class="nav-links"
+            >
+              <a
+                aria-current="page"
+                class="nav-link active"
+                href="/"
+              >
+                Models
+              </a>
+              <a
+                class="nav-link"
+                href="/bookride"
+              >
+                BOOK RIDE
+              </a>
+              <a
+                class="nav-link"
+                href="/addItem"
+              >
+                ADD CAR
+              </a>
+              <a
+                class="nav-link"
+                href="/deleteItem"
+              >
+                DELETE CAR
+              </a>
+              <a
+                class="nav-link"
+                href="/myreservations"
+              >
+                RESERVATIONS
+              </a>
+            </div>
+            <button
+              class="btn btn-outline-danger px-3 w-50 mt-3"
+              type="button"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+      </aside>
+      <aside
+        class="sc-HzRMQ csqDgg"
+      >
+        <div
+          class="show-sidebar"
+        >
+          <div
+            class="content"
+          >
+            <header>
+              <img
+                alt="logo"
+                src=""
+              />
+            </header>
+            <div
+              class="nav-links"
+            >
+              <a
+                aria-current="page"
+                class="nav-link active"
+                href="/"
+              >
+                Models
+              </a>
+              <a
+                class="nav-link"
+                href="/bookride"
+              >
+                BOOK RIDE
+              </a>
+              <a
+                class="nav-link"
+                href="/addItem"
+              >
+                ADD CAR
+              </a>
+              <a
+                class="nav-link"
+                href="/deleteItem"
+              >
+                DELETE CAR
+              </a>
+              <a
+                class="nav-link"
+                href="/myreservations"
+              >
+                RESERVATIONS
+              </a>
+            </div>
+            <button
+              class=" ms-3 btn btn-outline-danger px-3 w-50 mt-3"
+              type="button"
+            >
+              Logout
+            </button>
+          </div>
+        </div>
+        <div
+          class="footer"
+        >
+          <div
+            class="socials"
+          >
+            <svg
+              fill="black"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"
+              />
+            </svg>
+            <svg
+              fill="black"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9.5 3h2.5v-3h-2.5c-1.93 0-3.5 1.57-3.5 3.5v1.5h-2v3h2v8h3v-8h2.5l0.5-3h-3v-1.5c0-0.271 0.229-0.5 0.5-0.5z"
+              />
+            </svg>
+            <svg
+              fill="black"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              version="1.1"
+              viewBox="0 0 17 17"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g />
+              <path
+                d="M17 2.615v1.308h-2.615v2.616h-1.308v-2.616h-2.615v-1.308h2.615v-2.615h1.308v2.615h2.615zM10.39 12.78c0 1.175-0.561 2.125-1.43 2.881-1.175 1.012-2.779 1.339-4.291 1.339-1.91 0-4.669-0.817-4.669-3.187 0-0.48 0.164-0.951 0.379-1.38 0.908-1.838 3.748-2.309 5.577-2.36-0.336-0.439-0.653-0.949-0.653-1.522 0-0.337 0.121-0.562 0.225-0.878-0.246 0.030-0.48 0.051-0.715 0.051-1.982 0-3.698-1.461-3.698-3.515 0-1.941 1.501-3.596 3.36-4.004 0.624-0.134 1.266-0.205 1.91-0.205h4.466l-1.379 0.807h-1.381c1.013 0.633 1.523 1.87 1.523 3.014 0 2.707-2.289 2.911-2.289 4.26 0 1.318 3.065 1.839 3.065 4.699zM7.725 4.853c0-1.553-0.839-4.117-2.729-4.117-1.337 0-1.991 1.185-1.991 2.391 0 1.552 1.021 3.984 2.84 3.984 1.398-0.001 1.88-1.012 1.88-2.258zM8.95 13.659c0-1.43-1.34-2.227-2.381-2.953-0.174-0.020-0.338-0.020-0.512-0.020-1.674 0-4.168 0.531-4.168 2.656 0 1.961 2.207 2.718 3.842 2.718 1.522 0 3.219-0.613 3.219-2.401z"
+              />
+            </svg>
+            <svg
+              fill="black"
+              height="1em"
+              stroke="currentColor"
+              stroke-width="0"
+              viewBox="0 0 384 512"
+              width="1em"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M204 6.5C101.4 6.5 0 74.9 0 185.6 0 256 39.6 296 63.6 296c9.9 0 15.6-27.6 15.6-35.4 0-9.3-23.7-29.1-23.7-67.8 0-80.4 61.2-137.4 140.4-137.4 68.1 0 118.5 38.7 118.5 109.8 0 53.1-21.3 152.7-90.3 152.7-24.9 0-46.2-18-46.2-43.8 0-37.8 26.4-74.4 26.4-113.4 0-66.2-93.9-54.2-93.9 25.8 0 16.8 2.1 35.4 9.6 50.7-13.8 59.4-42 147.9-42 209.1 0 18.9 2.7 37.5 4.5 56.4 3.4 3.8 1.7 3.4 6.9 1.5 50.4-69 48.6-82.5 71.4-172.8 12.3 23.4 44.1 36 69.3 36 106.2 0 153.9-103.5 153.9-196.8C384 71.3 298.2 6.5 204 6.5z"
+              />
+            </svg>
+          </div>
+          <div
+            class="text-black"
+          >
+            @2023 WHEELSAWAY
+          </div>
+        </div>
+      </aside>
+      <div
+        class="sliderWrapper"
+      >
+        <div
+          style="width: 100%; position: relative;"
+        >
+          <div
+            class="slider-title text-center"
+          >
+            <h2
+              class="text-center"
+            >
+              Latest Models
+            </h2>
+            <span>
+              Please select a model
+            </span>
+          </div>
+          <div
+            class="slider-btns"
+          >
+            <div
+              class="swiper-prev"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M217.9 256L345 129c9.4-9.4 9.4-24.6 0-33.9-9.4-9.4-24.6-9.3-34 0L167 239c-9.1 9.1-9.3 23.7-.7 33.1L310.9 417c4.7 4.7 10.9 7 17 7s12.3-2.3 17-7c9.4-9.4 9.4-24.6 0-33.9L217.9 256z"
+                />
+              </svg>
+            </div>
+            <div
+              class="swiper-next"
+            >
+              <svg
+                fill="currentColor"
+                height="1em"
+                stroke="currentColor"
+                stroke-width="0"
+                viewBox="0 0 512 512"
+                width="1em"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M294.1 256L167 129c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.3 34 0L345 239c9.1 9.1 9.3 23.7.7 33.1L201.1 417c-4.7 4.7-10.9 7-17 7s-12.3-2.3-17-7c-9.4-9.4-9.4-24.6 0-33.9l127-127.1z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            class="responsive-slider"
+            style="width: 90%; position: relative;"
+          >
+            <div
+              class="swiper swiper-initialized swiper-horizontal"
+            >
+              <div
+                class="swiper-wrapper"
+                style="transition-duration: 0ms; transform: translate3d(NaNpx, 0px, 0px);"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

@@ -1,6 +1,7 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 import { getUserFromLocalStorage } from '../../utils/LocalStorage';
+import { upload } from '@testing-library/user-event/dist/upload';
 
 export const BASE_URL = 'https://cars-api.up.railway.app/api/v1';
 
@@ -103,7 +104,7 @@ export const fetchReservations = createAsyncThunk(
 
 export const deleteReservation = createAsyncThunk(
   'cars/deleteReservation',
-  async (id, { rejectWithValue }) => {
+  async (id, { rejectWithValue, getState }) => {
     try {
       const token = getUserFromLocalStorage();
       const response = await axios.delete(`${BASE_URL}/reservations/${id}`, {
@@ -111,7 +112,11 @@ export const deleteReservation = createAsyncThunk(
           Authorization: `Bearer ${token.token}`,
         },
       });
-      return response.data;
+      const state = getState();
+      const filteredReservations = state.cars.reservations.filter(
+        (reservation) => reservation.id != id,
+      );
+      return filteredReservations;
     } catch (err) {
       return rejectWithValue(await err.response.data);
     }
@@ -157,9 +162,7 @@ export const carSlice = createSlice({
       state.reservations = action.payload;
     },
     [deleteReservation.fulfilled]: (state, action) => {
-      state.reservations = state.reservations.filter(
-        (reservation) => reservation.id !== action.payload,
-      );
+      state.reservations = action.payload;
     },
   },
 });

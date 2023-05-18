@@ -40,7 +40,7 @@
 
 ## Live Demo
 
-To see this project's live demo, please click [here](https://car-rentals-frontend.netlify.app/).
+To see this project's live demo, please click [here](https://wheelsaway-app.vercel.app/).
 
 ## Desktop View
 

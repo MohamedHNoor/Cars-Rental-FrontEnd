@@ -3,7 +3,7 @@ import axios from 'axios';
 import { getUserFromLocalStorage } from '../../utils/LocalStorage';
 import { upload } from '@testing-library/user-event/dist/upload';
 
-export const BASE_URL = 'https://mhnoor-car-rental-api-e6f2b940d147.herokuapp.com/api/v1/cars';
+export const BASE_URL = 'https://mhnoor-car-rental-api-e6f2b940d147.herokuapp.com/api/v1';
 
 export const fetchCars = createAsyncThunk(
   'cars/fetchData',
